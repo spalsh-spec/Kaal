@@ -3,17 +3,17 @@
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
-/* ─────────────────────────────────────────────
+/* ─────────────────────────────
    MacBook mockup with animated AI interface
    Rendered entirely in SVG + Tailwind
-─────────────────────────────────────────────── */
+─────────────────────────────── */
 export function DeviceMockup({ className }: { className?: string }) {
   return (
     <div className={cn('relative', className)}>
       {/* Glow behind device */}
       <div
         className="absolute inset-0 blur-3xl rounded-full opacity-40 animate-glow-pulse"
-        style={{ background: 'radial-gradient(ellipse, rgba(99,102,241,0.6) 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(ellipse, rgba(232,150,60,0.55) 0%, transparent 70%)' }}
       />
 
       <motion.div
@@ -28,7 +28,7 @@ export function DeviceMockup({ className }: { className?: string }) {
             className="relative rounded-[18px] overflow-hidden border border-white/10"
             style={{
               background: 'linear-gradient(145deg, #1c1c1e 0%, #111114 100%)',
-              boxShadow: '0 0 0 1px rgba(255,255,255,0.06), 0 40px 80px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.08)',
+              boxShadow: '0 0 0 1px rgba(255,255,255,0.06), 0 40px 80px rgba(60,40,20,0.35), inset 0 1px 0 rgba(255,255,255,0.08)',
               aspectRatio: '16/10',
             }}
           >
@@ -54,7 +54,7 @@ export function DeviceMockup({ className }: { className?: string }) {
             className="rounded-[10px] overflow-hidden border border-white/[0.06]"
             style={{
               background: 'linear-gradient(165deg, #2a2a2e 0%, #1c1c1f 100%)',
-              boxShadow: '0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06)',
+              boxShadow: '0 20px 60px rgba(60,40,20,0.28), inset 0 1px 0 rgba(255,255,255,0.06)',
               height: 48,
             }}
           >
@@ -82,20 +82,20 @@ export function DeviceMockup({ className }: { className?: string }) {
   )
 }
 
-/* ─────────────────────────────────────────────
+/* ─────────────────────────────
    Animated screen content — AI interface
-─────────────────────────────────────────────── */
+─────────────────────────────── */
 function ScreenContent() {
   return (
     <div
       className="w-full h-full"
-      style={{ background: 'linear-gradient(135deg, #0c0c14 0%, #080810 100%)' }}
+      style={{ background: 'linear-gradient(135deg, #14100c 0%, #0d0a07 100%)' }}
     >
       {/* Grid overlay */}
       <div
         className="absolute inset-0 opacity-30"
         style={{
-          backgroundImage: 'linear-gradient(rgba(99,102,241,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.08) 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(rgba(232,150,60,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(232,150,60,0.08) 1px, transparent 1px)',
           backgroundSize: '24px 24px',
         }}
       />

@@ -48,10 +48,10 @@ export const PERFORMANCE_OPTIONS = [
 ] as const
 
 export const COLOR_OPTIONS = [
-  { id: 'midnight',    name: 'Midnight',    swatch: '#0b1020', glow: 'rgba(40,55,120,0.55)',  deltaCents: 0 },
-  { id: 'silver',      name: 'Silver',      swatch: '#d9dbe0', glow: 'rgba(180,190,210,0.45)', deltaCents: 0 },
-  { id: 'space-black', name: 'Space Black', swatch: '#1b1b20', glow: 'rgba(99,102,241,0.55)',  deltaCents: 15000 }, // +$150
-  { id: 'starlight',   name: 'Starlight',   swatch: '#efe9da', glow: 'rgba(230,210,160,0.45)', deltaCents: 15000 }, // +$150
+  { id: 'midnight',    name: 'Midnight',    swatch: '#0b1020', glow: 'rgba(180,130,70,0.42)',  deltaCents: 0 },
+  { id: 'silver',      name: 'Silver',      swatch: '#d9dbe0', glow: 'rgba(210,190,150,0.42)', deltaCents: 0 },
+  { id: 'space-black', name: 'Space Black', swatch: '#1b1b20', glow: 'rgba(232,130,30,0.48)',  deltaCents: 15000 }, // +$150
+  { id: 'starlight',   name: 'Starlight',   swatch: '#efe9da', glow: 'rgba(240,200,140,0.46)', deltaCents: 15000 }, // +$150
 ] as const
 
 export const SETUP_OPTIONS = [

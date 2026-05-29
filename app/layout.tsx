@@ -29,7 +29,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body className="min-h-screen bg-black text-white font-sans">
+      <body className="min-h-screen bg-background text-foreground font-sans">
+        {/* Saffron heritage hairline */}
+        <div
+          aria-hidden
+          className="pointer-events-none fixed top-0 inset-x-0 h-[3px] z-[60] bg-gradient-to-r from-volta-600 via-volta-400 to-volta-600"
+        />
         {children}
       </body>
     </html>

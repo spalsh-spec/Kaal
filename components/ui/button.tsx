@@ -19,15 +19,15 @@ const buttonVariants = cva(
         ghost:
           'hover:bg-muted hover:text-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
-        // LeverageOS custom variants
+        // LeverageOS custom variants (saffron-clay)
         volta:
           'bg-volta-500 text-white hover:bg-volta-600 shadow-lg shadow-volta-500/25 hover:shadow-volta-500/40 transition-all duration-200 hover:-translate-y-0.5',
         'volta-outline':
-          'border border-volta-500/50 text-volta-300 hover:bg-volta-500/10 hover:border-volta-500',
+          'border border-volta-500/50 text-volta-700 hover:bg-volta-500/10 hover:border-volta-500',
         white:
-          'bg-white text-gray-900 hover:bg-gray-100 shadow-lg',
+          'bg-foreground text-background hover:bg-foreground/90 shadow-lg',
         'white-outline':
-          'border border-white/20 text-white hover:bg-white/10 hover:border-white/40',
+          'border border-border text-foreground hover:bg-muted hover:border-volta-500/50',
       },
       size: {
         default: 'h-10 px-5 py-2',

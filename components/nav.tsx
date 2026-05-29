@@ -14,11 +14,11 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md' : 'bg-transparent'}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-md border-b border-border/60' : 'bg-transparent'}`}
     >
       <nav className="max-w-screen-xl mx-auto px-6 h-14 flex items-center justify-between">
-        <Link href="/" className="text-white font-semibold text-sm tracking-wide">
-          LeverageOS
+        <Link href="/" className="text-foreground font-semibold text-sm tracking-wide">
+          Leverage<span className="text-volta-600">OS</span>
         </Link>
         <div className="hidden md:flex items-center gap-8">
           {[
@@ -27,12 +27,12 @@ export function Nav() {
             { label: 'How It Works', href: '/how-it-works' },
             { label: 'About', href: '/about' },
           ].map((link) => (
-            <Link key={link.href} href={link.href} className="text-white/80 hover:text-white text-sm transition-colors">
+            <Link key={link.href} href={link.href} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
               {link.label}
             </Link>
           ))}
         </div>
-        <Link href="/devices#configurator" className="text-sm text-white bg-white/10 hover:bg-white/20 px-4 py-1.5 rounded transition-colors border border-white/20">
+        <Link href="/devices#configurator" className="text-sm text-white bg-volta-500 hover:bg-volta-600 px-4 py-1.5 rounded-lg transition-colors shadow-sm shadow-volta-500/20">
           Order Now
         </Link>
       </nav>
