@@ -83,11 +83,11 @@ export default function DevicesPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6 }}
-          className="relative rounded-3xl border border-border/40 bg-white/[0.03] p-4 md:p-8 overflow-hidden"
+          className="relative rounded-3xl border border-[#0038B8]/15 bg-white p-4 md:p-8 overflow-hidden shadow-xl shadow-[#0038B8]/10"
         >
           <div
             className="absolute inset-0 blur-3xl opacity-40 pointer-events-none"
-            style={{ background: `radial-gradient(ellipse at center, ${color.glow} 0%, transparent 70%)` }}
+            style={{ background: `radial-gradient(ellipse at center, #0038B8 0%, transparent 70%)` }}
           />
           <img
             src="/ai-ecosystem.svg"
