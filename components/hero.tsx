@@ -1,37 +1,33 @@
 'use client'
 
 import Link from 'next/link'
+import { DeviceMockup } from '@/components/device-mockup'
 
 export function Hero() {
   return (
-    <section
-      className="relative h-screen flex flex-col items-center justify-end pb-24 text-center overflow-hidden bg-black"
-    >
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/60" />
-
-      {/* Abstract ambient light */}
-      <div className="absolute inset-0 flex items-center justify-center">
+    <section className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden bg-black px-6 pt-28 pb-20">
+      {/* Ambient light */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div
-          className="w-[600px] h-[600px] rounded-full opacity-30 blur-3xl"
+          className="w-[600px] h-[600px] max-w-[92vw] rounded-full opacity-30 blur-3xl"
           style={{ background: 'radial-gradient(circle, rgba(99,102,241,0.6) 0%, rgba(99,102,241,0.1) 50%, transparent 70%)' }}
         />
       </div>
 
-      {/* Laptop silhouette placeholder — centered */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[560px] h-[320px] rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm flex items-center justify-center">
-          <div className="w-[480px] h-[260px] rounded-lg bg-gradient-to-br from-white/5 to-white/[0.02] flex items-center justify-center">
-            <span className="text-white/20 text-sm font-mono">LeverageOS Gen 1</span>
-          </div>
-        </div>
+      {/* Product visual */}
+      <div className="relative z-10 w-full max-w-[540px]">
+        <DeviceMockup />
       </div>
 
-      {/* Bottom text — Tesla style */}
-      <div className="relative z-10 flex flex-col items-center gap-6">
+      {/* Slogan + CTAs */}
+      <div className="relative z-10 mt-10 flex flex-col items-center gap-5">
         <div>
-          <h1 className="text-4xl sm:text-5xl font-semibold text-white tracking-tight leading-tight">LeverageOS Gen 1</h1>
-          <p className="mt-2 text-base text-white/70">AI superpowers, delivered. Starting at $1,899.</p>
+          <h1 className="text-5xl sm:text-6xl font-display font-normal text-white tracking-tight leading-tight">
+            Outwork the <span className="italic gradient-text">world.</span>
+          </h1>
+          <p className="mt-3 text-base sm:text-lg text-white/70">
+            AI superpowers, delivered. Pre-loaded for your field, ready on day one. From $5,000.
+          </p>
         </div>
         <div className="flex items-center gap-4">
           <Link
