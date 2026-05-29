@@ -65,6 +65,38 @@ export default function DevicesPage() {
         </motion.div>
       </section>
 
+      {/* ── PRE-LOADED ECOSYSTEM ── */}
+      <section id="ecosystem" className="max-w-6xl mx-auto px-6 py-20">
+        <div className="text-center mb-10">
+          <Badge variant="volta">Pre-loaded</Badge>
+          <h2 className="mt-4 text-3xl md:text-5xl font-display font-normal tracking-tight">
+            Supercharged the moment you <span className="italic gradient-text">open the lid.</span>
+          </h2>
+          <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
+            Every connector, skill, plugin and agent your work needs — wired in and
+            authenticated before it ships. No setup tax. Just leverage.
+          </p>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.6 }}
+          className="relative rounded-3xl border border-border/40 bg-white/[0.03] p-4 md:p-8 overflow-hidden"
+        >
+          <div
+            className="absolute inset-0 blur-3xl opacity-40 pointer-events-none"
+            style={{ background: `radial-gradient(ellipse at center, ${color.glow} 0%, transparent 70%)` }}
+          />
+          <img
+            src="/ai-ecosystem.svg"
+            alt="A LeverageOS laptop with a glowing AI core, surrounded by the connectors, skills, plugins and agents it ships pre-loaded with — Slack, GitHub, Notion, Figma, Gmail, Calendar, Linear, Asana, HubSpot, Airtable, Canva, Adobe, Vercel, Cloudflare, CockroachDB, Databricks, BigQuery and more."
+            className="relative z-10 w-full h-auto rounded-2xl"
+          />
+        </motion.div>
+      </section>
+
       {/* ── CONFIGURATOR ── */}
       <section id="configurator" className="max-w-6xl mx-auto px-6 py-20">
         <div className="text-center mb-12">
