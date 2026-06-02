@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, ChevronDown, Check } from 'lucide-react'
-import { AiBurst } from '@/components/landing/ai-burst'
+import { AiLaptop } from '@/components/landing/ai-laptop'
 import { PROFESSIONS } from '@/lib/data'
 import { BRAND_STACK, BrandLogo } from '@/components/landing/brand-logos'
 import { BASE_PRICE_CENTS, PERFORMANCE_OPTIONS } from '@/lib/config'
@@ -69,9 +69,9 @@ function Hero() {
       <Heading dark eyebrow="HeliosOS"
         title="The AI-native MacBook."
         subtitle={`Open the lid — you're already ahead. Pre-loaded for your profession. From ${formatPrice(BASE_PRICE_CENTS)}.`} />
-      {/* Product visual fills the middle */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-full max-w-3xl h-1/2 mt-24"><AiBurst /></div>
+      {/* Realistic MacBook with named launchpad + popping, labelled app tiles */}
+      <div className="relative z-10 w-full flex-1 flex items-center justify-center px-5 pb-2 pointer-events-none">
+        <div className="w-full max-w-md sm:max-w-xl md:max-w-2xl"><AiLaptop /></div>
       </div>
       <Ctas dark secondaryLabel="Learn More" onSecondary={() => scrollToId('profession')} />
       <button onClick={() => scrollToId('profession')} aria-label="Scroll"
