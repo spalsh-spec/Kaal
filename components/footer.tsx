@@ -1,35 +1,75 @@
-import Link from 'next/link'
+'use client'
 
-const LINKS = [
-  { label: 'Privacy', href: '/privacy' },
-  { label: 'Terms', href: '/terms' },
-  { label: 'Support', href: '/support' },
-  { label: 'Careers', href: '/about' },
-]
+import Link from 'next/link'
+import { Sun } from 'lucide-react'
+import { openOrder } from '@/lib/order-bus'
+import { BRAND } from '@/lib/landing-data'
 
 export function Footer() {
   return (
-    <footer className="bg-secondary border-t border-border px-6 py-10">
-      <div className="max-w-screen-xl mx-auto flex flex-col items-center gap-7">
-        {/* Signature line */}
-        <div className="flex flex-col items-center gap-1.5 text-center">
-          <span className="h-px w-12 bg-gradient-to-r from-transparent via-volta-500 to-transparent" />
-          <p className="text-[11px] tracking-wide text-muted-foreground">
-            Knowledge bestows humility. Built to give you leverage.
-          </p>
+    <footer className="border-t border-border bg-background">
+      <div className="mx-auto max-w-screen-xl px-5 sm:px-6 py-14">
+        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          {/* Brand */}
+          <div className="space-y-3">
+            <div className="flex items-center gap-2 font-semibold text-lg">
+              <span className="grid place-items-center w-7 h-7 rounded-[5px] text-white"
+                    style={{ backgroundImage: 'linear-gradient(135deg,#f59e0b,#fb7185)' }}>
+                <Sun className="w-4 h-4" />
+              </span>
+              Helios<span className="text-volta-600">.Ai</span>
+            </div>
+            <p className="text-sm text-muted-foreground max-w-xs text-balance">
+              {BRAND.slogan} {BRAND.product} is your AI-powered operating layer.
+            </p>
+            <button onClick={openOrder} className="btn-box-gold px-5 py-2 text-sm mt-1">Order Now</button>
+          </div>
+
+          {/* Product */}
+          <FooterCol title="Leverage OS" links={[
+            { label: 'Overview', href: '/#product' },
+            { label: 'Plans', href: '/#plans' },
+            { label: 'Examples', href: '/#examples' },
+            { label: 'Weekly Updates', href: '/#updates' },
+          ]} />
+
+          {/* Support */}
+          <FooterCol title="Support" links={[
+            { label: 'Support & Setup', href: '/#support' },
+            { label: 'How It Works', href: '/how-it-works' },
+            { label: 'Help Centre', href: '/support' },
+          ]} />
+
+          {/* Company */}
+          <FooterCol title="Company" links={[
+            { label: 'About', href: '/about' },
+            { label: 'Privacy', href: '/privacy' },
+            { label: 'Terms', href: '/terms' },
+          ]} />
         </div>
 
-        <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} LeverageOS, Inc.</p>
-          <div className="flex items-center gap-6">
-            {LINKS.map((l) => (
-              <Link key={l.href} href={l.href} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-                {l.label}
-              </Link>
-            ))}
-          </div>
+        <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+          <span>© {new Date().getFullYear()} Helios.Ai. All rights reserved.</span>
+          <span className="italic">Updated every week, so you are never left behind.</span>
         </div>
       </div>
     </footer>
+  )
+}
+
+function FooterCol({ title, links }: { title: string; links: { label: string; href: string }[] }) {
+  return (
+    <div className="space-y-3">
+      <h4 className="text-sm font-semibold text-foreground">{title}</h4>
+      <ul className="space-y-2">
+        {links.map((l) => (
+          <li key={l.href}>
+            <Link href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              {l.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }

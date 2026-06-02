@@ -4,25 +4,25 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://leverageos.com'),
+  metadataBase: new URL('https://helios.ai'),
   title: {
-    default: 'LeverageOS — AI Superpowers, Delivered.',
-    template: '%s | LeverageOS',
+    default: 'Helios.Ai — Leverage OS, your AI operating layer',
+    template: '%s | Helios.Ai',
   },
   description:
-    'The world first AI-native laptop. Pre-loaded, pre-optimized, ready to work for you on day one.',
+    'Leverage OS is an AI-powered operating layer for founders, students, creators and small businesses. Build, organise, automate and improve your work — every week. We believe everyone can be a rising star.',
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    url: 'https://leverageos.com',
-    siteName: 'LeverageOS',
-    title: 'LeverageOS — AI Superpowers, Delivered.',
-    description: 'Pre-loaded AI on premium hardware. For everyone.',
+    locale: 'en_AU',
+    url: 'https://helios.ai',
+    siteName: 'Helios.Ai',
+    title: 'Helios.Ai — Leverage OS',
+    description: 'Your AI stack, operating as one system. Updated every week, so you are never left behind.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'LeverageOS — AI Superpowers, Delivered.',
-    creator: '@leverageos',
+    title: 'Helios.Ai — Leverage OS',
+    creator: '@helios_ai',
   },
 }
 

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="system-ui,Segoe UI,Arial,sans-serif">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0038B8"/>
+      <stop offset="1" stop-color="#001a57"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <g text-anchor="middle">
+    <text x="800" y="420" fill="#ffffff" font-size="74" font-weight="700">Product walkthrough</text>
+    <text x="800" y="486" fill="rgba(255,255,255,0.82)" font-size="30" font-weight="500">Video placeholder — add your clip/poster</text>
+    <text x="800" y="700" fill="rgba(255,255,255,0.62)" font-size="22">REPLACE → /public/placeholders/video-walkthrough.svg</text>
+  </g>
+</svg>
