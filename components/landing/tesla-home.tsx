@@ -71,7 +71,7 @@ function Hero() {
         subtitle={`Open the lid — you're already ahead. Pre-loaded for your profession. From ${formatPrice(BASE_PRICE_CENTS)}.`} />
       {/* Realistic MacBook with named launchpad + popping, labelled app tiles */}
       <div className="relative z-10 w-full flex-1 flex items-center justify-center px-5 pb-2 pointer-events-none">
-        <div className="w-full max-w-md sm:max-w-xl md:max-w-2xl"><AiLaptop /></div>
+        <div className="w-full max-w-xl sm:max-w-2xl md:max-w-3xl"><AiLaptop /></div>
       </div>
       <Ctas dark secondaryLabel="Learn More" onSecondary={() => scrollToId('profession')} />
       <button onClick={() => scrollToId('profession')} aria-label="Scroll"
