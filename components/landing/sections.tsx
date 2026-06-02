@@ -39,7 +39,7 @@ export function PrimaryCta() {
         <h2 className="text-3xl sm:text-5xl font-display tracking-tight leading-tight text-balance">
           Helios.Ai — <span className="helios-text">we believe everyone can be a rising star.</span>
         </h2>
-        <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
+        <p className="mt-4 text-lg sm:text-xl font-medium text-muted-foreground max-w-2xl mx-auto text-balance">
           {BRAND.product} is an AI-powered operating layer for founders, students, creators and small
           businesses. Build, organise, automate and improve your work — every week, no tech skills needed.
         </p>
@@ -101,7 +101,7 @@ export function ProductExplainer() {
         <h2 className="mt-3 text-3xl sm:text-5xl font-display tracking-tight leading-tight text-balance">
           Your personal AI operating system.
         </h2>
-        <p className="mt-4 text-lg text-muted-foreground text-balance">
+        <p className="mt-4 text-xl text-muted-foreground text-balance">
           Think of it as your own Jarvis: all your AI tools in one place, getting smarter every week,
           quietly doing the hard parts so you can focus on the work that matters.
         </p>
@@ -117,8 +117,8 @@ export function ProductExplainer() {
                     style={{ backgroundImage: 'linear-gradient(135deg,#0038B8,#4d84f5)' }}>
                 <Icon className="w-5 h-5" />
               </span>
-              <h3 className="font-semibold text-lg">{e.title}</h3>
-              <p className="mt-1.5 text-sm text-muted-foreground">{e.body}</p>
+              <h3 className="font-semibold text-xl">{e.title}</h3>
+              <p className="mt-1.5 text-base text-muted-foreground">{e.body}</p>
             </motion.div>
           )
         })}
@@ -169,7 +169,7 @@ export function Plans() {
       <motion.div {...reveal} className="text-center max-w-2xl mx-auto">
         <p className="text-sm uppercase tracking-[0.22em] text-volta-600 font-medium">Simple plans</p>
         <h2 className="mt-3 text-3xl sm:text-5xl font-display tracking-tight text-balance">Choose your level.</h2>
-        <p className="mt-4 text-muted-foreground">Two clear options. Switch or upgrade any time.</p>
+        <p className="mt-4 text-lg text-muted-foreground">Two clear options. Switch or upgrade any time.</p>
       </motion.div>
 
       <div className="mt-12 grid gap-5 md:grid-cols-2 max-w-4xl mx-auto">
@@ -192,10 +192,10 @@ export function Plans() {
                 <div className="text-xs text-muted-foreground">{plan.cadence}</div>
               </div>
             </div>
-            <p className="mt-2 text-sm text-muted-foreground">{plan.for}</p>
+            <p className="mt-2 text-base text-muted-foreground">{plan.for}</p>
             <ul className="mt-5 space-y-2.5">
               {plan.features.map((f) => (
-                <li key={f} className="flex items-start gap-2.5 text-sm">
+                <li key={f} className="flex items-start gap-2.5 text-base">
                   <Check className="w-4 h-4 text-volta-600 mt-0.5 shrink-0" />
                   <span>{f}</span>
                 </li>
@@ -222,7 +222,7 @@ export function SupportModules() {
           <h2 className="mt-3 text-3xl sm:text-5xl font-display tracking-tight text-balance">
             We set it up. You just use it.
           </h2>
-          <p className="mt-4 text-muted-foreground text-balance">
+          <p className="mt-4 text-lg text-muted-foreground text-balance">
             Everything you need to get going and stay ahead — bundled in, ready to go.
           </p>
         </motion.div>
@@ -236,8 +236,8 @@ export function SupportModules() {
                       style={{ backgroundImage: 'linear-gradient(135deg,#f59e0b,#fb7185)' }}>
                   <Icon className="w-5 h-5" />
                 </span>
-                <h3 className="font-semibold text-lg">{m.title}</h3>
-                <p className="mt-1.5 text-sm text-muted-foreground">{m.body}</p>
+                <h3 className="font-semibold text-xl">{m.title}</h3>
+                <p className="mt-1.5 text-base text-muted-foreground">{m.body}</p>
               </motion.div>
             )
           })}
@@ -257,7 +257,7 @@ export function LiveExamples() {
           <h2 className="mt-3 text-3xl sm:text-5xl font-display tracking-tight text-balance">
             Watch a real business get built.
           </h2>
-          <p className="mt-4 text-muted-foreground text-balance">
+          <p className="mt-4 text-lg text-muted-foreground text-balance">
             See Leverage OS plan, build and launch a company in real time — the same way it works for you.
           </p>
           <ul className="mt-6 space-y-3">

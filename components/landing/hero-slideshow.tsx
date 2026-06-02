@@ -67,7 +67,7 @@ export function HeroSlideshow() {
                 <h1 className="mt-3 text-[2rem] leading-[1.08] sm:text-5xl lg:text-6xl font-display text-white tracking-tight text-balance">
                   {slide.title}
                 </h1>
-                <p className="mt-4 text-base sm:text-lg text-white/85 text-balance">
+                <p className="mt-4 text-lg sm:text-xl font-medium text-white/90 text-balance">
                   {slide.subtitle}
                 </p>
                 <div className="mt-7 flex flex-wrap items-center gap-3">

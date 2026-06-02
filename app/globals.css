@@ -19,7 +19,7 @@
     --secondary: 214 100% 97%;
     --secondary-foreground: 222 47% 18%;
     --muted: 214 38% 96%;
-    --muted-foreground: 215 16% 40%;
+    --muted-foreground: 215 22% 28%;
     --accent: 222 100% 36%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 72% 51%;
@@ -34,11 +34,16 @@
 
 @layer base {
   * { @apply border-border; }
-  html { @apply antialiased scroll-smooth; }
+  /* Bigger, bolder, more readable across the whole site */
+  html { @apply antialiased scroll-smooth; font-size: 18px; }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: 'rlig' 1, 'calt' 1;
+    font-weight: 450;
   }
+  p { font-weight: 500; }
+  /* Sans headings get heavier; serif display titles keep their natural weight */
+  h3:not(.font-display), h4:not(.font-display) { font-weight: 700; }
   ::selection { background: rgba(0,56,184,0.18); }
   ::-webkit-scrollbar { width: 3px; }
   ::-webkit-scrollbar-track { background: transparent; }
