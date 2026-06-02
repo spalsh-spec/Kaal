@@ -61,9 +61,9 @@ export function AiLaptop() {
         ))}
 
         {/* ── MacBook lid (screen) ── */}
-        <div className="relative rounded-[18px] p-[10px] shadow-2xl"
-             style={{ background: 'linear-gradient(160deg,#3a3d42 0%,#202225 60%,#0e0f12 100%)',
-                      boxShadow: '0 40px 80px -30px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.14)' }}>
+        <div className="relative rounded-[20px] p-[11px] shadow-2xl"
+             style={{ background: 'linear-gradient(155deg,#54585f 0%,#34373c 28%,#1c1e22 64%,#0c0d10 100%)',
+                      boxShadow: '0 52px 96px -34px rgba(0,0,0,.82), inset 0 1.5px 0 rgba(255,255,255,.22), inset 0 0 0 1px rgba(255,255,255,.06), inset 0 -2px 6px rgba(0,0,0,.5)' }}>
           {/* notch */}
           <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-16 h-[14px] rounded-b-[8px] bg-[#0e0f12] z-20 flex items-center justify-center">
             <span className="w-1.5 h-1.5 rounded-full bg-[#23252a] ring-1 ring-white/10" />
@@ -72,9 +72,9 @@ export function AiLaptop() {
           <div className="relative rounded-[10px] overflow-hidden aspect-[16/10]"
                style={{ background: 'linear-gradient(160deg,#0a1430 0%,#0a0f24 55%,#070a18 100%)' }}>
             <div className="absolute inset-0 bg-grid-pattern opacity-20" />
-            {/* glass reflection */}
+            {/* glass reflection + subtle vignette */}
             <div className="absolute inset-0 pointer-events-none"
-                 style={{ background: 'linear-gradient(125deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,0) 38%)' }} />
+                 style={{ background: 'linear-gradient(118deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,.04) 24%,rgba(255,255,255,0) 46%), radial-gradient(130% 100% at 50% -10%, transparent 58%, rgba(0,0,0,.4) 100%)' }} />
             <Launchpad />
           </div>
         </div>
@@ -82,15 +82,16 @@ export function AiLaptop() {
         {/* ── hinge + aluminium base ── */}
         <div className="mx-auto h-[6px] w-[101%] -ml-[0.5%] rounded-b-[4px]"
              style={{ background: 'linear-gradient(to bottom,#2b2d31,#15161a)' }} />
-        <div className="relative mx-auto w-[112%] -ml-[6%] h-[14px] rounded-b-[12px]"
-             style={{ background: 'linear-gradient(to bottom,#d7dade 0%,#a9adb4 55%,#7e828a 100%)',
-                      boxShadow: '0 24px 40px -18px rgba(0,0,0,.6)' }}>
+        <div className="relative mx-auto w-[112%] -ml-[6%] h-[15px] rounded-b-[13px]"
+             style={{ background: 'linear-gradient(to bottom,#eef0f3 0%,#cdd1d7 26%,#a4a8b0 62%,#6c7077 100%)',
+                      boxShadow: '0 28px 46px -18px rgba(0,0,0,.68), inset 0 1.5px 0 rgba(255,255,255,.85), inset 0 -1px 2px rgba(0,0,0,.25)' }}>
           {/* front lip cutout */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-[5px] rounded-b-[6px] bg-[#9499a1]" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-[6px] rounded-b-[7px]"
+               style={{ background: 'linear-gradient(to bottom,#aeb2ba,#888d95)' }} />
         </div>
         {/* contact shadow */}
-        <div className="mx-auto mt-2 h-5 w-[80%] rounded-[50%] blur-xl opacity-50"
-             style={{ background: 'radial-gradient(ellipse,rgba(0,0,0,.6),transparent 70%)' }} />
+        <div className="mx-auto mt-2 h-6 w-[82%] rounded-[50%] blur-2xl opacity-55"
+             style={{ background: 'radial-gradient(ellipse,rgba(0,0,0,.7),transparent 70%)' }} />
       </motion.div>
     </div>
   )
