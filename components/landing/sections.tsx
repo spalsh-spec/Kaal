@@ -19,11 +19,12 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   GitBranch, LifeBuoy, PackageCheck, Power, Radio, Clapperboard, Images,
 }
 
+// Mount-based reveal: content always ends visible (no dependency on a
+// scroll observer firing) — robust against fast scrolls / timing.
 const reveal = {
-  initial: { opacity: 0, y: 24 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-80px' },
-  transition: { duration: 0.6, ease: [0.2, 0.7, 0.2, 1] as const },
+  initial: { opacity: 0, y: 18 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.55, ease: [0.2, 0.7, 0.2, 1] as const },
 }
 
 const Wrap = ({ id, className = '', children }: { id?: string; className?: string; children: React.ReactNode }) => (
@@ -77,8 +78,8 @@ export function Pyramid() {
       {/* two half-width images → pyramid; stack on mobile */}
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
         {[PYRAMID.left, PYRAMID.right].map((p, idx) => (
-          <motion.figure {...reveal} transition={{ ...reveal.transition, delay: idx * 0.08 }}
-            key={p.src} className="group relative overflow-hidden rounded-xl border border-border">
+          <motion.figure key={p.src} {...reveal} transition={{ ...reveal.transition, delay: idx * 0.08 }}
+            className="group relative overflow-hidden rounded-xl border border-border">
             {/* REPLACE: {p.src} — half-width supporting image */}
             <img src={p.src} alt="" className="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
             <figcaption className="absolute bottom-0 inset-x-0 p-4 sm:p-5 bg-gradient-to-t from-black/65 to-transparent text-white text-base sm:text-lg font-medium">
@@ -110,7 +111,7 @@ export function ProductExplainer() {
         {EXPLAIN.map((e, idx) => {
           const Icon = ICONS[e.icon] ?? Sparkles
           return (
-            <motion.div {...reveal} transition={{ ...reveal.transition, delay: idx * 0.06 }} key={e.title}
+            <motion.div key={e.title} {...reveal} transition={{ ...reveal.transition, delay: idx * 0.06 }}
               className="rounded-xl border border-border bg-card p-6 hover:border-volta-500/50 transition-colors duration-200">
               <span className="grid place-items-center w-11 h-11 rounded-[8px] text-white mb-4"
                     style={{ backgroundImage: 'linear-gradient(135deg,#0038B8,#4d84f5)' }}>
@@ -173,7 +174,7 @@ export function Plans() {
 
       <div className="mt-12 grid gap-5 md:grid-cols-2 max-w-4xl mx-auto">
         {PLANS.map((plan) => (
-          <motion.div {...reveal} key={plan.id} role="button" tabIndex={0}
+          <motion.div key={plan.id} {...reveal} role="button" tabIndex={0}
             data-selected={selected === plan.id}
             onClick={() => setSelected(plan.id)}
             onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setSelected(plan.id)}
@@ -229,7 +230,7 @@ export function SupportModules() {
           {SUPPORT_MODULES.map((m, idx) => {
             const Icon = ICONS[m.icon] ?? Sparkles
             return (
-              <motion.div {...reveal} transition={{ ...reveal.transition, delay: idx * 0.05 }} key={m.id}
+              <motion.div key={m.id} {...reveal} transition={{ ...reveal.transition, delay: idx * 0.05 }}
                 className="rounded-xl border border-border bg-card p-6 hover:-translate-y-0.5 hover:border-volta-500/50 transition-all duration-200">
                 <span className="grid place-items-center w-11 h-11 rounded-[8px] text-white mb-4"
                       style={{ backgroundImage: 'linear-gradient(135deg,#f59e0b,#fb7185)' }}>
@@ -298,7 +299,7 @@ export function VideoShowcase() {
         </motion.div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2">
           {VIDEOS.map((v, idx) => (
-            <motion.button {...reveal} transition={{ ...reveal.transition, delay: idx * 0.06 }} key={v.id}
+            <motion.button key={v.id} {...reveal} transition={{ ...reveal.transition, delay: idx * 0.06 }}
               className="group relative rounded-xl overflow-hidden border border-white/10 text-left">
               {/* REPLACE: {v.src} — video poster / clip */}
               <img src={v.src} alt={v.title} className="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-105" />
