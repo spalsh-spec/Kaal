@@ -160,11 +160,11 @@ export const PRICING_TIERS = [
   {
     id: 'standard',
     name: 'Standard',
-    tagline: 'Your AI-powered laptop, ready on day one.',
+    tagline: 'Your AI-powered MacBook, ready on day one.',
     priceMonthly: null,
-    priceOnce: 179900, // $1,799
+    priceOnce: 500000, // $5,000
     includes: [
-      'MacBook Air M3 (base) — your choice of color',
+      'LeverageOS MacBook (Normal trim) — your choice of colour',
       'LeverageOS pre-installed & configured',
       'Your profession\'s full AI tool stack',
       'Authenticated & ready — no setup',
@@ -174,7 +174,7 @@ export const PRICING_TIERS = [
       'LeverageOS community access',
       '1-year hardware warranty extension',
     ],
-    addons: ['Windows option: starting at $1,599', 'MacBook Pro upgrade: +$600'],
+    addons: ['Pro trim: +$1,500', 'Max trim: +$3,000', 'Premium colour: +$150'],
     cta: 'Order Standard',
     popular: false,
     color: 'border-border',
@@ -184,9 +184,9 @@ export const PRICING_TIERS = [
     name: 'Pro Bundle',
     tagline: 'Everything in Standard, plus a personal AI coach.',
     priceMonthly: null,
-    priceOnce: 279900, // $2,799
+    priceOnce: 620000, // $6,200 = $5,000 base + $1,200 setup upgrade
     includes: [
-      'MacBook Pro M3 Pro — your choice of config',
+      'LeverageOS MacBook — your choice of trim & colour',
       'Everything in Standard, plus:',
       '6 months of Stack Updates',
       '3 months of Leverage Consulting (1 session/month)',
@@ -228,8 +228,8 @@ export const PRICING_TIERS = [
 export const HOW_IT_WORKS_STEPS = [
   {
     step: '01',
-    title: 'Choose Your Device',
-    description: 'Pick your hardware — MacBook Air, MacBook Pro, or a premium Windows device. All configured identically. All arrive perfect.',
+    title: 'Choose Your MacBook',
+    description: 'Pick your trim — Normal, Pro, or Max. All configured identically. All arrive perfect.',
     icon: '💻',
   },
   {
