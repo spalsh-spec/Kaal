@@ -84,7 +84,7 @@ export default function ConsultingPage() {
             <span className="font-display italic gradient-text">AI specialist.</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Work 1:1 with a certified LeverageOS specialist. They know your profession,
+            Work 1:1 with a certified HeliosOS specialist. They know your profession,
             your device, and exactly how to turn AI into results for your specific situation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
@@ -183,7 +183,7 @@ export default function ConsultingPage() {
         </div>
 
         <p className="text-center text-sm text-muted-foreground mt-6">
-          All consulting sessions include a recording. LeverageOS device not required (but sessions are 3× more valuable with one).
+          All consulting sessions include a recording. HeliosOS device not required (but sessions are 3× more valuable with one).
         </p>
       </section>
 

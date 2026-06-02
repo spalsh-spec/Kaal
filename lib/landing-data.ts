@@ -1,11 +1,11 @@
 // ───────────────────────────────────────────────
-// Helios.Ai — Leverage OS landing content (data only)
+// Helios.Ai — HeliosOS landing content (data only)
 // Australian English. Simple, premium, non-technical.
 // ───────────────────────────────────────────────
 
 export const BRAND = {
   company: 'Helios.Ai',
-  product: 'Leverage OS',
+  product: 'HeliosOS',
   slogan: 'We believe everyone can be a rising star.',
   secondary: [
     'Updated every week, so you are never left behind.',
@@ -36,21 +36,21 @@ export const SLIDES: Slide[] = [
     eyebrow: 'Helios.Ai',
     title: 'Everyone can be a rising star.',
     subtitle:
-      'Leverage OS is your AI-powered operating layer — build, organise and automate your work, every single week.',
+      'HeliosOS is your AI-powered operating layer — build, organise and automate your work, every single week.',
   },
   {
     id: 'flow',
     kind: 'flow',
     eyebrow: 'One system',
     title: 'Your whole AI stack, working as one.',
-    subtitle: 'From a rough idea to finished work — Leverage OS connects the tools and does the heavy lifting.',
+    subtitle: 'From a rough idea to finished work — HeliosOS connects the tools and does the heavy lifting.',
   },
   {
     id: 'walkthrough',
     kind: 'video',
     eyebrow: 'See it move',
     title: 'Like your own personal Jarvis.',
-    subtitle: 'A two-minute look at how Leverage OS plans, builds and improves your work for you.',
+    subtitle: 'A two-minute look at how HeliosOS plans, builds and improves your work for you.',
     src: '/placeholders/video-walkthrough.svg',
   },
   {
@@ -85,7 +85,7 @@ export const EXPLAIN = [
   { icon: 'CalendarClock', title: 'Upgraded every week', body: 'Your system quietly gets better in the background, so your work does too.' },
   { icon: 'Cpu', title: 'Your personal AI operating system', body: 'One layer that plans, builds and manages — it works the way you think.' },
   { icon: 'Rocket', title: 'Build, automate, sell, manage', body: 'A practical way to get real work done faster, from idea to result.' },
-  { icon: 'Sparkles', title: 'Made for results, not complexity', body: 'No technical skills required. You bring the goal; Leverage OS handles the how.' },
+  { icon: 'Sparkles', title: 'Made for results, not complexity', body: 'No technical skills required. You bring the goal; HeliosOS handles the how.' },
 ] as const
 
 // ── Flow diagram ─────────────────────────────────

@@ -55,7 +55,7 @@ const COMMON_QUESTIONS = [
   { q: 'How do I install a new tool that\'s not in my stack?', href: '#' },
   { q: 'How do I update my AI stack to the latest version?', href: '#' },
   { q: 'My device arrived — what do I do first?', href: '#' },
-  { q: 'Can I use LeverageOS on an existing laptop?', href: '#' },
+  { q: 'Can I use HeliosOS on an existing laptop?', href: '#' },
   { q: 'How do I cancel or postpone my order?', href: '#' },
   { q: 'What\'s included in a Stack Update?', href: '#' },
   { q: 'How do I get a refund?', href: '#' },
@@ -140,7 +140,7 @@ export default function SupportPage() {
         <div className="rounded-2xl border border-border/40 bg-card/30 p-10">
           <div className="text-center mb-8">
             <div className="text-5xl mb-4">🌐</div>
-            <h2 className="text-2xl font-semibold mb-2">LeverageOS Community</h2>
+            <h2 className="text-2xl font-semibold mb-2">HeliosOS Community</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
               2,400+ professionals sharing prompts, discoveries, and workflow wins.
               The fastest way to level up is learning from people in your field.

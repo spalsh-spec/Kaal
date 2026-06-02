@@ -91,7 +91,7 @@ export default function DevicesPage() {
           />
           <img
             src="/ai-ecosystem.svg"
-            alt="A LeverageOS laptop with a glowing AI core, surrounded by the connectors, skills, plugins and agents it ships pre-loaded with — Slack, GitHub, Notion, Figma, Gmail, Calendar, Linear, Asana, HubSpot, Airtable, Canva, Adobe, Vercel, Cloudflare, CockroachDB, Databricks, BigQuery and more."
+            alt="A HeliosOS laptop with a glowing AI core, surrounded by the connectors, skills, plugins and agents it ships pre-loaded with — Slack, GitHub, Notion, Figma, Gmail, Calendar, Linear, Asana, HubSpot, Airtable, Canva, Adobe, Vercel, Cloudflare, CockroachDB, Databricks, BigQuery and more."
             className="relative z-10 w-full h-auto rounded-2xl"
           />
         </motion.div>

@@ -26,7 +26,7 @@ const VALUES = [
   },
   {
     title: 'Updates are the product.',
-    body: 'The hardware depreciates. The stack appreciates. Monthly updates are not a feature — they\'re the entire model. Your LeverageOS device should be more valuable in 12 months than the day it shipped.',
+    body: 'The hardware depreciates. The stack appreciates. Monthly updates are not a feature — they\'re the entire model. Your HeliosOS device should be more valuable in 12 months than the day it shipped.',
   },
   {
     title: 'We succeed when you do.',
@@ -61,7 +61,7 @@ export default function AboutPage() {
         >
           <div className="text-lg text-foreground/80 leading-relaxed space-y-6">
             <p>
-              We started LeverageOS because we were watching something unfair happen.
+              We started HeliosOS because we were watching something unfair happen.
             </p>
             <p>
               AI was transforming the work of people who could code. Developers were automating away weeks of work. Startups were running with half the headcount. Early adopters were achieving results that looked impossible to the people next to them.
@@ -73,7 +73,7 @@ export default function AboutPage() {
               Learning AI from scratch takes 200+ hours. The tools change every week. The setup is genuinely hard. And the people who need AI most are the ones with the least time to figure it out.
             </p>
             <p className="text-volta-300 font-medium text-xl">
-              We built LeverageOS to close that gap permanently.
+              We built HeliosOS to close that gap permanently.
             </p>
             <p>
               Not a course. Not a subscription. Not a productivity hack. A device — properly configured, maintained, and updated — that puts world-class AI capability in the hands of anyone who opens it.
@@ -142,10 +142,10 @@ export default function AboutPage() {
       {/* Numbers */}
       <section className="max-w-5xl mx-auto px-6 pb-24">
         <div className="rounded-2xl border border-border/40 bg-card/30 p-10">
-          <h2 className="text-2xl font-semibold text-center mb-8">LeverageOS by the numbers</h2>
+          <h2 className="text-2xl font-semibold text-center mb-8">HeliosOS by the numbers</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { value: '2,400+', label: 'Professionals using LeverageOS' },
+              { value: '2,400+', label: 'Professionals using HeliosOS' },
               { value: '8', label: 'Profession verticals covered' },
               { value: '40+', label: 'AI tools in the ecosystem' },
               { value: '< 3%', label: 'Return rate' },
@@ -166,9 +166,9 @@ export default function AboutPage() {
         </h2>
         <div className="grid md:grid-cols-3 gap-5">
           {[
-            { outlet: 'TechCrunch', quote: '"LeverageOS makes a genuine case for being the first truly non-developer AI computer."', date: 'January 2025' },
+            { outlet: 'TechCrunch', quote: '"HeliosOS makes a genuine case for being the first truly non-developer AI computer."', date: 'January 2025' },
             { outlet: 'The Verge', quote: '"The hardware is premium. The concept is new. The execution is surprisingly seamless."', date: 'February 2025' },
-            { outlet: 'Fast Company', quote: '"What Apple did for smartphones, LeverageOS is trying to do for AI. It\'s ambitious. It might work."', date: 'March 2025' },
+            { outlet: 'Fast Company', quote: '"What Apple did for smartphones, HeliosOS is trying to do for AI. It\'s ambitious. It might work."', date: 'March 2025' },
           ].map(p => (
             <div key={p.outlet} className="glass rounded-2xl p-6">
               <p className="text-xs font-bold text-volta-400 mb-3">{p.outlet}</p>

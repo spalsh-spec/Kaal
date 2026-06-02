@@ -3,7 +3,7 @@ import { Footer } from '@/components/footer'
 import { Badge } from '@/components/ui/badge'
 
 export const metadata = {
-  title: 'Terms of Service — LeverageOS',
+  title: 'Terms of Service — HeliosOS',
 }
 
 export default function TermsPage() {
@@ -28,11 +28,11 @@ export default function TermsPage() {
           {[
             {
               title: '1. Agreement',
-              body: 'By purchasing from LeverageOS, Inc. ("LeverageOS"), you agree to these Terms. If you don\'t agree, don\'t purchase. These Terms govern your purchase, use of LeverageOS hardware, software configuration, and services.',
+              body: 'By purchasing from HeliosOS, Inc. ("HeliosOS"), you agree to these Terms. If you don\'t agree, don\'t purchase. These Terms govern your purchase, use of HeliosOS hardware, software configuration, and services.',
             },
             {
               title: '2. What you\'re buying',
-              body: 'You\'re purchasing: (a) a hardware device (MacBook, Windows laptop), (b) a configuration layer and AI tool stack pre-installed by LeverageOS, and (c) the service tier you selected (Stack Updates, tutorials, consulting sessions). You own the hardware outright. The LeverageOS configuration is licensed for your personal, non-commercial or commercial professional use.',
+              body: 'You\'re purchasing: (a) a hardware device (MacBook, Windows laptop), (b) a configuration layer and AI tool stack pre-installed by HeliosOS, and (c) the service tier you selected (Stack Updates, tutorials, consulting sessions). You own the hardware outright. The HeliosOS configuration is licensed for your personal, non-commercial or commercial professional use.',
             },
             {
               title: '3. Pricing & payment',
@@ -49,7 +49,7 @@ export default function TermsPage() {
             {
               title: '6. Hardware warranty',
               id: 'warranty',
-              body: `LeverageOS extends the manufacturer's warranty by 12 months for all devices.
+              body: `HeliosOS extends the manufacturer's warranty by 12 months for all devices.
 
 **Coverage:** Hardware defects, component failures, and manufacturing issues. Does not cover: physical damage, liquid damage, theft, or normal wear and tear.
 
@@ -63,15 +63,15 @@ export default function TermsPage() {
             },
             {
               title: '8. Acceptable use',
-              body: 'You may use your LeverageOS device and software for any lawful purpose. You may not: (a) resell or redistribute the LeverageOS configuration, (b) reverse-engineer the configuration layer, (c) use the device to violate applicable law, or (d) attempt to circumvent any technical protections.',
+              body: 'You may use your HeliosOS device and software for any lawful purpose. You may not: (a) resell or redistribute the HeliosOS configuration, (b) reverse-engineer the configuration layer, (c) use the device to violate applicable law, or (d) attempt to circumvent any technical protections.',
             },
             {
               title: '9. AI tools',
-              body: 'Third-party AI tools (Claude, Perplexity, etc.) run under your accounts and are subject to their own terms. LeverageOS pre-configures these tools but does not operate them. Your use of those tools is governed by the respective providers\' terms.',
+              body: 'Third-party AI tools (Claude, Perplexity, etc.) run under your accounts and are subject to their own terms. HeliosOS pre-configures these tools but does not operate them. Your use of those tools is governed by the respective providers\' terms.',
             },
             {
               title: '10. Limitation of liability',
-              body: 'To the maximum extent permitted by law, LeverageOS\'s liability for any claim arising from your purchase is limited to the amount you paid. We are not liable for indirect, consequential, or incidental damages.',
+              body: 'To the maximum extent permitted by law, HeliosOS\'s liability for any claim arising from your purchase is limited to the amount you paid. We are not liable for indirect, consequential, or incidental damages.',
             },
             {
               title: '11. Governing law',

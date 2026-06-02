@@ -14,7 +14,7 @@ const CATEGORIES = ['All', 'Getting Started', 'Marketing', 'Legal', 'Healthcare'
 
 const VIDEOS = [
   {
-    title: 'Your First Day with LeverageOS',
+    title: 'Your First Day with HeliosOS',
     description: 'A complete orientation to your new device. What\'s installed, where everything lives, and how to get your first AI win in under 30 minutes.',
     duration: '18 min',
     level: 'Beginner',

@@ -16,7 +16,7 @@ const PROMISES = [
     icon: Shield,
     title: 'You\'re Never Left Behind',
     description:
-      'The biggest fear of non-developers: falling behind. With LeverageOS, that\'s structurally impossible. We stay current so you stay current.',
+      'The biggest fear of non-developers: falling behind. With HeliosOS, that\'s structurally impossible. We stay current so you stay current.',
     color: 'text-emerge-400',
     bg: 'bg-emerge-500/10',
   },
@@ -32,7 +32,7 @@ const PROMISES = [
     icon: Users,
     title: 'Community Intelligence',
     description:
-      'Every LeverageOS user discovers new workflows. The best ones get added to your stack. Collective intelligence, personal results.',
+      'Every HeliosOS user discovers new workflows. The best ones get added to your stack. Collective intelligence, personal results.',
     color: 'text-sky-400',
     bg: 'bg-sky-500/10',
   },
@@ -50,7 +50,7 @@ export function UpdatePromise() {
         </h2>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           The device you receive today is just the beginning. Most tech depreciates.
-          LeverageOS appreciates.
+          HeliosOS appreciates.
         </p>
       </div>
 

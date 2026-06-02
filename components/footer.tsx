@@ -25,7 +25,7 @@ export function Footer() {
             <Link href={ORDER_HREF} className="btn-box-gold px-5 py-2 text-sm mt-1 inline-flex">Order Now</Link>
           </div>
 
-          <FooterCol title="Leverage OS" links={[
+          <FooterCol title="HeliosOS" links={[
             { label: 'Overview', href: '/#hero' },
             { label: 'Devices', href: '/devices' },
             { label: 'Trims', href: '/#trims' },

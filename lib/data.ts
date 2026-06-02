@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// LeverageOS — Static Data
+// HeliosOS — Static Data
 // ─────────────────────────────────────────────
 
 export const PROFESSIONS = [
@@ -164,14 +164,14 @@ export const PRICING_TIERS = [
     priceMonthly: null,
     priceOnce: 500000, // $5,000
     includes: [
-      'LeverageOS MacBook (Normal trim) — your choice of colour',
-      'LeverageOS pre-installed & configured',
+      'HeliosOS MacBook (Normal trim) — your choice of colour',
+      'HeliosOS pre-installed & configured',
       'Your profession\'s full AI tool stack',
       'Authenticated & ready — no setup',
       '6 starter tutorial videos',
       '1 onboarding call with an AI specialist',
       '3 months of Stack Updates included',
-      'LeverageOS community access',
+      'HeliosOS community access',
       '1-year hardware warranty extension',
     ],
     addons: ['Pro trim: +$1,500', 'Max trim: +$3,000', 'Premium colour: +$150'],
@@ -186,7 +186,7 @@ export const PRICING_TIERS = [
     priceMonthly: null,
     priceOnce: 620000, // $6,200 = $5,000 base + $1,200 setup upgrade
     includes: [
-      'LeverageOS MacBook — your choice of trim & colour',
+      'HeliosOS MacBook — your choice of trim & colour',
       'Everything in Standard, plus:',
       '6 months of Stack Updates',
       '3 months of Leverage Consulting (1 session/month)',

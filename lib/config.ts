@@ -1,5 +1,5 @@
 // ──────────────────────────────
-// LeverageOS — Configurator pricing model
+// HeliosOS — Configurator pricing model
 // ──────────────────────────────
 // All prices are in CENTS (formatPrice divides by 100).
 //

@@ -29,7 +29,7 @@ const STEPS = [
     description: 'Our team takes your order and goes to work. We source the hardware, pre-install your AI stack, configure every tool, authenticate your accounts, and test the entire setup — before it ships.',
     detail: [
       'Hardware sourced, inspected, and prepared',
-      'LeverageOS configuration layer installed',
+      'HeliosOS configuration layer installed',
       'All 8–15 tools installed and authenticated',
       'Custom profession workflows programmed',
       'Full QA test run by an AI specialist',
@@ -68,7 +68,7 @@ const STEPS = [
     step: '05',
     title: 'Your First AI Win',
     subtitle: 'Day 1',
-    description: '94% of LeverageOS customers achieve a meaningful result within their first 8 hours. A task that used to take an afternoon now takes 15 minutes. You feel it the first day.',
+    description: '94% of HeliosOS customers achieve a meaningful result within their first 8 hours. A task that used to take an afternoon now takes 15 minutes. You feel it the first day.',
     detail: [
       'Tutorial library: 6 core modules (Standard) or 40+ hours (Pro)',
       'Practice prompts and templates included',
@@ -206,7 +206,7 @@ export default function HowItWorksPage() {
       <section className="max-w-5xl mx-auto px-6 pb-24">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-display font-normal tracking-tight mb-3">
-            Before vs. after LeverageOS
+            Before vs. after HeliosOS
           </h2>
           <p className="text-muted-foreground">The difference is structural, not just a new app.</p>
         </div>
@@ -226,7 +226,7 @@ export default function HowItWorksPage() {
           </div>
           <div className="bg-emerge-500/5 p-1">
             <div className="bg-emerge-500/10 rounded-xl p-3 mb-1">
-              <p className="text-xs font-semibold text-emerge-400 uppercase tracking-wider text-center">After LeverageOS</p>
+              <p className="text-xs font-semibold text-emerge-400 uppercase tracking-wider text-center">After HeliosOS</p>
             </div>
             <div className="space-y-1 p-2">
               {COMPARISON.map(c => (

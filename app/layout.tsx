@@ -6,22 +6,22 @@ import './globals.css'
 export const metadata: Metadata = {
   metadataBase: new URL('https://helios.ai'),
   title: {
-    default: 'Helios.Ai — Leverage OS, your AI operating layer',
+    default: 'Helios.Ai — HeliosOS, your AI operating layer',
     template: '%s | Helios.Ai',
   },
   description:
-    'Leverage OS is an AI-powered operating layer for founders, students, creators and small businesses. Build, organise, automate and improve your work — every week. We believe everyone can be a rising star.',
+    'HeliosOS is an AI-powered operating layer for founders, students, creators and small businesses. Build, organise, automate and improve your work — every week. We believe everyone can be a rising star.',
   openGraph: {
     type: 'website',
     locale: 'en_AU',
     url: 'https://helios.ai',
     siteName: 'Helios.Ai',
-    title: 'Helios.Ai — Leverage OS',
+    title: 'Helios.Ai — HeliosOS',
     description: 'Your AI stack, operating as one system. Updated every week, so you are never left behind.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Helios.Ai — Leverage OS',
+    title: 'Helios.Ai — HeliosOS',
     creator: '@helios_ai',
   },
 }

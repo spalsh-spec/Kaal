@@ -7,7 +7,7 @@ import { Menu, X, Sun } from 'lucide-react'
 
 // Minimal Tesla-style nav. Order routes to the configurator.
 const LINKS = [
-  { label: 'Leverage OS', href: '/#hero' },
+  { label: 'HeliosOS', href: '/#hero' },
   { label: 'Devices', href: '/devices' },
   { label: 'Fields', href: '/for-your-field' },
   { label: 'Support', href: '/support' },
@@ -32,7 +32,7 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled ? 'bg-background/85 backdrop-blur-md border-b border-border/60' : 'bg-transparent'
       }`}
     >
@@ -48,7 +48,7 @@ export function Nav() {
         <div className="hidden md:flex items-center gap-7">
           {LINKS.map((l) => (
             <Link key={l.href} href={l.href}
-                  className={`text-sm font-medium transition-colors duration-200 ${light ? 'text-white/80 hover:text-white' : 'text-muted-foreground hover:text-foreground'}`}>
+                  className={`text-sm font-medium transition-colors duration-300 ${light ? 'text-white/80 hover:text-white' : 'text-muted-foreground hover:text-foreground'}`}>
               {l.label}
             </Link>
           ))}
@@ -61,7 +61,7 @@ export function Nav() {
       </nav>
 
       <div
-        className={`md:hidden overflow-hidden border-b border-border/60 bg-background/95 backdrop-blur-md transition-[max-height,opacity] duration-300 ${
+        className={`md:hidden overflow-hidden border-b border-border/60 bg-background/95 backdrop-blur-md transition-[max-height,opacity] duration-500 ${
           open ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >

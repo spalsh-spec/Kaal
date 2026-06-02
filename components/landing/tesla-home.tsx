@@ -4,17 +4,19 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, ChevronDown, Check } from 'lucide-react'
 import { AiBurst } from '@/components/landing/ai-burst'
-import { PROFESSIONS, ECOSYSTEM_TOOLS } from '@/lib/data'
+import { PROFESSIONS } from '@/lib/data'
+import { BRAND_STACK, BrandLogo } from '@/components/landing/brand-logos'
 import { BASE_PRICE_CENTS, PERFORMANCE_OPTIONS } from '@/lib/config'
 import { formatPrice } from '@/lib/utils'
 import { scrollToId } from '@/lib/order-bus'
 
 const ORDER_HREF = '/devices#configurator'
 
+// Apple-paced: slower, deliberate ease-out reveal.
 const fade = {
-  initial: { opacity: 0, y: 20 },
+  initial: { opacity: 0, y: 26 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, ease: [0.2, 0.7, 0.2, 1] as const },
+  transition: { duration: 1.0, delay: 0.1, ease: [0.22, 0.61, 0.36, 1] as const },
 }
 
 // Two centred CTAs, Tesla style. dark = panel has a dark background.
@@ -64,7 +66,7 @@ function Hero() {
   return (
     <section id="hero" className="panel snap-panel helios-panel">
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
-      <Heading dark eyebrow="Leverage OS"
+      <Heading dark eyebrow="HeliosOS"
         title="The AI-native MacBook."
         subtitle={`Open the lid — you're already ahead. Pre-loaded for your profession. From ${formatPrice(BASE_PRICE_CENTS)}.`} />
       {/* Product visual fills the middle */}
@@ -111,10 +113,13 @@ function Stack() {
         subtitle="The best AI tools — pre-installed, authenticated, and updated every week." />
       <div className="relative z-10 mt-10 px-5 w-full max-w-4xl">
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3">
-          {ECOSYSTEM_TOOLS.map((t) => (
-            <div key={t.name} className="flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-4 text-center backdrop-blur">
-              <span className="text-2xl text-amber-300">{t.logo}</span>
-              <span className="text-xs sm:text-sm font-semibold text-white leading-tight">{t.name}</span>
+          {BRAND_STACK.map((b) => (
+            <div key={b.name} className="flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-4 text-center backdrop-blur transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5">
+              <span className="grid place-items-center w-11 h-11 rounded-[12px] bg-white shadow-md">
+                <BrandLogo icon={b.icon} size={24} />
+              </span>
+              <span className="text-xs sm:text-sm font-semibold text-white leading-tight">{b.name}</span>
+              <span className="hidden sm:block text-[10px] text-white/55 leading-tight">{b.desc}</span>
             </div>
           ))}
         </div>
@@ -131,7 +136,7 @@ function Trims() {
       <div className="absolute inset-0 bg-grid-pattern opacity-50" />
       <Heading dark={false} eyebrow="Choose your power"
         title="Normal. Pro. Max."
-        subtitle={`Three trims of one machine. Every LeverageOS MacBook starts at ${formatPrice(BASE_PRICE_CENTS)}.`} />
+        subtitle={`Three trims of one machine. Every HeliosOS MacBook starts at ${formatPrice(BASE_PRICE_CENTS)}.`} />
       <div className="relative z-10 mt-10 px-5 w-full max-w-5xl">
         <div className="grid gap-4 md:grid-cols-3">
           {PERFORMANCE_OPTIONS.map((opt) => (
