@@ -7,10 +7,23 @@ import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { ArrowRight, Play, Clock, BookOpen, Users } from 'lucide-react'
+import { ArrowRight, Play, Clock, BookOpen, Users, Rocket, TrendingUp, Scale, Stethoscope, LineChart, Clapperboard, Briefcase, Sparkles, MessageCircle } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const CATEGORIES = ['All', 'Getting Started', 'Marketing', 'Legal', 'Healthcare', 'Finance', 'Creative', 'Executive', 'Advanced']
+
+// Per-category icon + gradient tint for premium video thumbnails.
+const CAT_THUMB: Record<string, { icon: LucideIcon; grad: string }> = {
+  'Getting Started': { icon: Rocket, grad: 'from-volta-600/30 to-volta-900/40' },
+  'Marketing': { icon: TrendingUp, grad: 'from-violet-500/30 to-purple-900/40' },
+  'Legal': { icon: Scale, grad: 'from-blue-500/30 to-indigo-900/40' },
+  'Healthcare': { icon: Stethoscope, grad: 'from-cyan-500/30 to-sky-900/40' },
+  'Finance': { icon: LineChart, grad: 'from-emerald-500/30 to-teal-900/40' },
+  'Creative': { icon: Clapperboard, grad: 'from-rose-500/30 to-orange-900/40' },
+  'Executive': { icon: Briefcase, grad: 'from-amber-500/30 to-yellow-900/40' },
+  'Advanced': { icon: Sparkles, grad: 'from-fuchsia-500/30 to-violet-900/40' },
+}
 
 const VIDEOS = [
   {
@@ -198,7 +211,10 @@ export default function LearnPage() {
       {/* Video grid */}
       <section className="max-w-6xl mx-auto px-6 pb-24">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filtered.map((video, i) => (
+          {filtered.map((video, i) => {
+            const thumb = CAT_THUMB[video.category] ?? CAT_THUMB['Getting Started']
+            const ThumbIcon = thumb.icon
+            return (
             <motion.div
               key={video.title}
               initial={{ opacity: 0, y: 16 }}
@@ -207,10 +223,11 @@ export default function LearnPage() {
               className="glass rounded-2xl overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform"
             >
               {/* Thumbnail */}
-              <div className="aspect-video bg-gradient-to-br from-volta-950/60 to-background flex items-center justify-center relative">
-                <span className="text-5xl">{video.thumb}</span>
+              <div className={cn('aspect-video bg-gradient-to-br flex items-center justify-center relative', thumb.grad)}>
+                <ThumbIcon className="h-12 w-12 text-white/90" strokeWidth={1.75} />
+                <span className="absolute top-3 left-3 text-[10px] font-semibold uppercase tracking-wider text-white/70">{video.category}</span>
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="w-14 h-14 rounded-full bg-white/10 backdrop-blur flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full bg-white/15 backdrop-blur flex items-center justify-center ring-1 ring-white/30">
                     <Play className="h-6 w-6 text-white ml-1" />
                   </div>
                 </div>
@@ -230,7 +247,8 @@ export default function LearnPage() {
                 <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">{video.description}</p>
               </div>
             </motion.div>
-          ))}
+            )
+          })}
         </div>
 
         {/* Pro upsell */}
@@ -251,7 +269,9 @@ export default function LearnPage() {
       <section className="max-w-5xl mx-auto px-6 pb-24">
         <div className="grid md:grid-cols-2 gap-6">
           <div className="glass rounded-2xl p-8">
-            <div className="text-4xl mb-4">💬</div>
+            <div className="w-12 h-12 mb-4 rounded-xl bg-volta-500/10 border border-volta-500/20 flex items-center justify-center">
+              <MessageCircle className="h-6 w-6 text-volta-600" strokeWidth={2} />
+            </div>
             <h3 className="text-xl font-semibold mb-2">Community Forum</h3>
             <p className="text-sm text-muted-foreground mb-4">
               2,400+ professionals sharing prompts, workflows, and wins. The fastest way to level up is learning from people doing the same job as you.
@@ -261,7 +281,9 @@ export default function LearnPage() {
             </Button>
           </div>
           <div className="glass rounded-2xl p-8">
-            <div className="text-4xl mb-4">🎤</div>
+            <div className="w-12 h-12 mb-4 rounded-xl bg-volta-500/10 border border-volta-500/20 flex items-center justify-center">
+              <Users className="h-6 w-6 text-volta-600" strokeWidth={2} />
+            </div>
             <h3 className="text-xl font-semibold mb-2">Monthly Live Q&amp;A</h3>
             <p className="text-sm text-muted-foreground mb-4">
               Every month, our specialists host a live Q&amp;A session. Ask anything — about your workflow, a specific tool, or where AI is headed next.
