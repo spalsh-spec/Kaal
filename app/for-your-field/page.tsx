@@ -8,8 +8,20 @@ import { Footer } from '@/components/footer'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { PROFESSIONS } from '@/lib/data'
-import { ArrowRight, CheckCircle2, Zap } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Zap, TrendingUp, Scale, GraduationCap, Clapperboard, Rocket, Stethoscope, Home, LineChart } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
+
+const FIELD_ICONS: Record<string, LucideIcon> = {
+  marketing: TrendingUp,
+  lawyer: Scale,
+  student: GraduationCap,
+  creator: Clapperboard,
+  executive: Rocket,
+  doctor: Stethoscope,
+  realestate: Home,
+  finance: LineChart,
+}
 
 const PROFESSION_DETAILS: Record<string, {
   headline: string
@@ -161,40 +173,45 @@ export default function ForYourFieldPage() {
       <Nav />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 text-center max-w-4xl mx-auto px-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
-          <Badge variant="volta">For Your Field</Badge>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-normal tracking-tight">
-            Built for your work.
-            <br />
-            <span className="font-display italic gradient-text">Not everyone else&apos;s.</span>
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Every profession gets a different device. Different tools, different workflows,
-            different results. Choose yours below.
-          </p>
-        </motion.div>
+      <section className="helios-panel text-white">
+        <div className="pt-36 pb-24 text-center max-w-4xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
+            <Badge variant="volta">For Your Field</Badge>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-normal tracking-tight text-white">
+              Built for your work.
+              <br />
+              <span className="font-display italic gradient-text">Not everyone else&apos;s.</span>
+            </h1>
+            <p className="text-xl text-white/80 max-w-2xl mx-auto font-medium">
+              Every profession gets a different device. Different tools, different workflows,
+              different results. Choose yours below.
+            </p>
+          </motion.div>
+        </div>
       </section>
 
       {/* Profession selector */}
       <section className="max-w-6xl mx-auto px-6 pb-6">
         <div className="flex flex-wrap justify-center gap-3">
-          {PROFESSIONS.map(p => (
+          {PROFESSIONS.map(p => {
+            const Icon = FIELD_ICONS[p.id] ?? Rocket
+            return (
             <button
               key={p.id}
               id={p.id}
               onClick={() => setActive(p.id)}
               className={cn(
-                'flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all',
+                'flex items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-semibold transition-all',
                 active === p.id
-                  ? 'border-volta-500 bg-volta-500/10 text-volta-300'
-                  : 'border-border/50 bg-card/30 text-muted-foreground hover:border-border hover:text-foreground'
+                  ? 'border-volta-500 bg-volta-500/10 text-volta-700 shadow-sm'
+                  : 'border-border bg-card text-muted-foreground hover:border-volta-500/50 hover:text-foreground'
               )}
             >
-              <span>{p.emoji}</span>
+              <Icon className="w-4 h-4 shrink-0" strokeWidth={2.25} />
               <span>{p.label}</span>
             </button>
-          ))}
+            )
+          })}
         </div>
       </section>
 
@@ -210,7 +227,9 @@ export default function ForYourFieldPage() {
           >
             {/* Headline */}
             <div className={cn('rounded-2xl p-10 mb-6 bg-gradient-to-br', profession.color, 'border', profession.border)}>
-              <div className="text-5xl mb-4">{profession.emoji}</div>
+              <div className="w-14 h-14 mb-4 rounded-2xl bg-foreground/5 border border-border/50 flex items-center justify-center">
+                {(() => { const Icon = FIELD_ICONS[active] ?? Rocket; return <Icon className="w-7 h-7 text-foreground" strokeWidth={2} /> })()}
+              </div>
               <h2 className="text-3xl md:text-4xl font-display font-normal tracking-tight mb-2">{detail.headline}</h2>
               <p className="text-lg text-muted-foreground max-w-2xl">{detail.subheadline}</p>
             </div>
@@ -310,7 +329,9 @@ export default function ForYourFieldPage() {
           Every profession. One platform.
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {PROFESSIONS.map(p => (
+          {PROFESSIONS.map(p => {
+            const Icon = FIELD_ICONS[p.id] ?? Rocket
+            return (
             <button
               key={p.id}
               onClick={() => {
@@ -323,11 +344,14 @@ export default function ForYourFieldPage() {
                 p.color
               )}
             >
-              <span className="text-3xl block mb-3">{p.emoji}</span>
+              <span className="mb-3 inline-flex w-11 h-11 rounded-xl bg-foreground/5 border border-border/50 items-center justify-center">
+                <Icon className="w-5 h-5 text-foreground" strokeWidth={2.25} />
+              </span>
               <h3 className="text-sm font-semibold mb-1">{p.label}</h3>
               <p className="text-xs text-muted-foreground">{p.tagline}</p>
             </button>
-          ))}
+            )
+          })}
         </div>
       </section>
 
