@@ -68,19 +68,21 @@ export default function SupportPage() {
       <Nav />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 text-center max-w-4xl mx-auto px-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
-          <Badge variant="volta">Support</Badge>
-          <h1 className="text-5xl md:text-6xl font-display font-normal tracking-tight">
-            We&apos;ve got you.
-            <br />
-            <span className="font-display italic gradient-text">Always.</span>
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Real humans. Fast responses. Plain English.
-            We don&apos;t do support tickets — we do conversations.
-          </p>
-        </motion.div>
+      <section className="helios-panel text-white">
+        <div className="pt-36 pb-24 text-center max-w-4xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
+            <Badge variant="volta">Support</Badge>
+            <h1 className="text-5xl md:text-6xl font-display font-normal tracking-tight text-white">
+              We&apos;ve got you.
+              <br />
+              <span className="font-display italic gradient-text">Always.</span>
+            </h1>
+            <p className="text-xl text-white/80 max-w-2xl mx-auto font-medium">
+              Real humans. Fast responses. Plain English.
+              We don&apos;t do support tickets — we do conversations.
+            </p>
+          </motion.div>
+        </div>
       </section>
 
       {/* Channels */}

@@ -28,7 +28,7 @@ export function Nav() {
   }, [])
 
   // Light text over the dark hero pages, at the top, not scrolled.
-  const light = ['/', '/devices', '/how-it-works', '/about', '/consulting'].includes(pathname) && !scrolled && !open
+  const light = ['/', '/devices', '/how-it-works', '/about', '/consulting', '/support', '/learn'].includes(pathname) && !scrolled && !open
 
   return (
     <header

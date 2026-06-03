@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowRight, ChevronDown, Check, Star, Users, RotateCcw, Headphones, Quote } from 'lucide-react'
+import { ArrowRight, ChevronDown, Check, Star, Users, RotateCcw, Headphones, Quote, Target, PackageCheck, Rocket } from 'lucide-react'
 import { AiLaptop } from '@/components/landing/ai-laptop'
 import { PROFESSIONS, TESTIMONIALS } from '@/lib/data'
 import { BRAND_STACK, BrandLogo } from '@/components/landing/brand-logos'
@@ -21,20 +21,24 @@ const fade = {
 
 // Two centred CTAs, Tesla style. dark = panel has a dark background.
 function Ctas({
-  dark, secondaryLabel, secondaryHref, onSecondary,
+  dark, secondaryLabel, secondaryHref, onSecondary, note,
 }: {
-  dark: boolean; secondaryLabel: string; secondaryHref?: string; onSecondary?: () => void
+  dark: boolean; secondaryLabel: string; secondaryHref?: string; onSecondary?: () => void; note?: string
 }) {
-  const primary = dark ? 'tbtn tbtn-primary' : 'tbtn tbtn-primary-dark'
   const ghost = dark ? 'tbtn tbtn-ghost' : 'tbtn tbtn-ghost-dark'
   return (
     <div className="panel-cta px-5">
-      <Link href={ORDER_HREF} className={primary}>Order Now <ArrowRight className="w-4 h-4" /></Link>
-      {secondaryHref ? (
-        <Link href={secondaryHref} className={ghost}>{secondaryLabel}</Link>
-      ) : (
-        <button onClick={onSecondary} className={ghost}>{secondaryLabel}</button>
-      )}
+      <div className="flex flex-col items-center gap-3">
+        <div className="flex flex-wrap gap-4 justify-center items-center">
+          <Link href={ORDER_HREF} className="tbtn tbtn-gold">Order Now <ArrowRight className="w-4 h-4" /></Link>
+          {secondaryHref ? (
+            <Link href={secondaryHref} className={ghost}>{secondaryLabel}</Link>
+          ) : (
+            <button onClick={onSecondary} className={ghost}>{secondaryLabel}</button>
+          )}
+        </div>
+        {note && <p className={`text-sm font-medium ${dark ? 'text-white/70' : 'text-muted-foreground'}`}>{note}</p>}
+      </div>
     </div>
   )
 }
@@ -53,6 +57,7 @@ export function TeslaHome() {
   return (
     <>
       <Hero />
+      <ThreeSteps />
       <Profession />
       <Stack />
       <Trims />
@@ -74,7 +79,8 @@ function Hero() {
       <div className="relative z-10 w-full flex-1 flex items-center justify-center px-5 pb-2 pointer-events-none">
         <div className="w-full max-w-xl sm:max-w-2xl md:max-w-3xl"><AiLaptop /></div>
       </div>
-      <Ctas dark secondaryLabel="Learn More" onSecondary={() => scrollToId('profession')} />
+      <Ctas dark secondaryLabel="Learn More" onSecondary={() => scrollToId('how')}
+        note="✓ 30-day money-back returns · ✓ Ships in 5 days" />
       <button onClick={() => scrollToId('profession')} aria-label="Scroll"
         className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 hover:text-white transition-colors z-10">
         <ChevronDown className="w-6 h-6 animate-bounce" />
@@ -181,9 +187,10 @@ function OrderPanel() {
             From {formatPrice(BASE_PRICE_CENTS)}. Hardware included — no monthly fee for the device.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <Link href={ORDER_HREF} className="tbtn tbtn-primary">Order Now <ArrowRight className="w-4 h-4" /></Link>
+            <Link href={ORDER_HREF} className="tbtn tbtn-gold">Order Now <ArrowRight className="w-4 h-4" /></Link>
             <Link href="/consulting" className="tbtn tbtn-ghost">Talk to Sales</Link>
           </div>
+          <p className="mt-5 text-sm font-medium text-white/75">✓ 30-day money-back returns · ✓ Ships in 5 days · ✓ Day-1 onboarding call</p>
         </motion.div>
       </div>
     </section>
@@ -234,6 +241,37 @@ function Proof() {
       </div>
 
       <Ctas dark={false} secondaryLabel="How It Works" secondaryHref="/how-it-works" />
+    </section>
+  )
+}
+
+// ── How it works in 3 steps — the whole model in 10 seconds ──
+function ThreeSteps() {
+  const steps = [
+    { n: '1', icon: Target, title: 'Tell us your job', body: 'Marketing, law, medicine, finance — we load the exact AI tools for your work.' },
+    { n: '2', icon: PackageCheck, title: 'We set it all up', body: 'Installed, authenticated and tested. It arrives ready — nothing for you to configure.' },
+    { n: '3', icon: Rocket, title: 'Open the lid', body: 'You’re already ahead on day one — a real win in your first hour.' },
+  ]
+  return (
+    <section id="how" className="panel snap-panel bg-background">
+      <Heading dark={false} eyebrow="How it works"
+        title="Set up in 3 simple steps." subtitle="No tech skills. No setup. You just open it and go." />
+      <div className="relative z-10 w-full flex-1 flex items-center justify-center px-5 py-6">
+        <div className="grid gap-5 md:grid-cols-3 max-w-5xl w-full">
+          {steps.map((s) => (
+            <div key={s.n} className="rounded-2xl border border-border bg-card p-7 text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <span className="grid place-items-center w-11 h-11 rounded-full text-white text-lg font-bold"
+                      style={{ backgroundImage: 'linear-gradient(135deg,#0038B8,#4d84f5)' }}>{s.n}</span>
+                <s.icon className="w-6 h-6 text-volta-600" />
+              </div>
+              <h3 className="mt-4 text-xl font-bold">{s.title}</h3>
+              <p className="mt-2 text-base text-muted-foreground">{s.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <Ctas dark={false} secondaryLabel="See full process" secondaryHref="/how-it-works" />
     </section>
   )
 }
