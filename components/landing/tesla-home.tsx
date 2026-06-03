@@ -2,9 +2,9 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowRight, ChevronDown, Check } from 'lucide-react'
+import { ArrowRight, ChevronDown, Check, Star, Users, RotateCcw, Headphones, Quote } from 'lucide-react'
 import { AiLaptop } from '@/components/landing/ai-laptop'
-import { PROFESSIONS } from '@/lib/data'
+import { PROFESSIONS, TESTIMONIALS } from '@/lib/data'
 import { BRAND_STACK, BrandLogo } from '@/components/landing/brand-logos'
 import { BASE_PRICE_CENTS, PERFORMANCE_OPTIONS } from '@/lib/config'
 import { formatPrice } from '@/lib/utils'
@@ -56,6 +56,7 @@ export function TeslaHome() {
       <Profession />
       <Stack />
       <Trims />
+      <Proof />
       <OrderPanel />
     </>
   )
@@ -185,6 +186,54 @@ function OrderPanel() {
           </div>
         </motion.div>
       </div>
+    </section>
+  )
+}
+
+// ── Social proof — built for risk-averse, non-technical buyers ──
+function Proof() {
+  const picks = TESTIMONIALS.filter((t) =>
+    ['James Thornton', 'Dr. Priya Sharma', 'Rodrigo Vasquez'].includes(t.name))
+  const trust = [
+    { icon: Star, label: '4.9 average rating' },
+    { icon: Users, label: '2,400+ professionals' },
+    { icon: RotateCcw, label: '30-day returns' },
+    { icon: Headphones, label: 'Day-1 onboarding call' },
+  ]
+  return (
+    <section id="proof" className="panel snap-panel bg-secondary/40 border-y border-border">
+      <Heading dark={false} eyebrow="Real people, real results"
+        title={'Made for people who aren’t “tech people.”'}
+        subtitle="A lawyer, a doctor, an estate agent — none of them coders. All of them ahead now." />
+
+      <div className="relative z-10 w-full flex-1 flex flex-col items-center justify-center px-5 gap-8 py-6">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          {trust.map((t) => (
+            <span key={t.label} className="inline-flex items-center gap-2 text-sm font-semibold text-foreground/80">
+              <t.icon className="w-4 h-4 text-volta-600" /> {t.label}
+            </span>
+          ))}
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-3 max-w-5xl w-full">
+          {picks.map((t) => (
+            <figure key={t.name} className="rounded-2xl border border-border bg-card p-6 text-left flex flex-col shadow-sm">
+              <Quote className="w-6 h-6 text-volta-500/40" />
+              <blockquote className="mt-2 text-base font-medium text-foreground/90 flex-1 leading-relaxed">{`“${t.text}”`}</blockquote>
+              <figcaption className="mt-4 flex items-center gap-3">
+                <span className={`grid place-items-center w-10 h-10 rounded-full text-white text-sm font-semibold bg-gradient-to-br ${t.gradient}`}>{t.avatar}</span>
+                <span>
+                  <span className="block text-sm font-semibold">{t.name}</span>
+                  <span className="block text-xs text-muted-foreground">{t.role}</span>
+                </span>
+              </figcaption>
+              <span className="mt-3 self-start text-xs font-semibold px-2.5 py-1 rounded-[5px] bg-volta-50 text-volta-700">{t.result}</span>
+            </figure>
+          ))}
+        </div>
+      </div>
+
+      <Ctas dark={false} secondaryLabel="How It Works" secondaryHref="/how-it-works" />
     </section>
   )
 }
