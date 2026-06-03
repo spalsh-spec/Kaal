@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowRight, ChevronDown, Check, Star, Users, RotateCcw, Headphones, Quote, Target, PackageCheck, Rocket } from 'lucide-react'
+import { ArrowRight, ChevronDown, Check, Star, Users, RotateCcw, Headphones, Quote, Target, PackageCheck, Rocket, TrendingUp, Scale, GraduationCap, Clapperboard, Stethoscope, Home, LineChart } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 import { AiLaptop } from '@/components/landing/ai-laptop'
 import { PROFESSIONS, TESTIMONIALS } from '@/lib/data'
 import { BRAND_STACK, BrandLogo } from '@/components/landing/brand-logos'
@@ -90,19 +91,35 @@ function Hero() {
 }
 
 // ── Panel 2 — Profession ─────────────────────────
+const PRO_ICONS: Record<string, LucideIcon> = {
+  marketing: TrendingUp,
+  lawyer: Scale,
+  student: GraduationCap,
+  creator: Clapperboard,
+  executive: Rocket,
+  doctor: Stethoscope,
+  realestate: Home,
+  finance: LineChart,
+}
+
 function Profession() {
   return (
     <section id="profession" className="panel snap-panel sun-panel">
       <Heading dark eyebrow="Pre-loaded for you"
         title="Built for your profession."
         subtitle="Marketing, law, medicine, finance and more — the exact AI stack for your work, ready on day one." />
-      <div className="relative z-10 mt-10 px-5 w-full max-w-3xl">
-        <div className="flex flex-wrap justify-center gap-2.5">
-          {PROFESSIONS.map((p) => (
-            <span key={p.id} className="px-4 py-2 rounded-[6px] bg-white/15 border border-white/25 text-white text-sm font-medium backdrop-blur">
-              {p.emoji} {p.label}
-            </span>
-          ))}
+      <div className="relative z-10 flex-1 flex items-center w-full">
+        <div className="px-5 w-full max-w-3xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-3">
+            {PROFESSIONS.map((p) => {
+              const Icon = PRO_ICONS[p.id] ?? Rocket
+              return (
+                <span key={p.id} className="inline-flex items-center gap-2 pl-3.5 pr-4 py-2.5 rounded-full bg-white/15 border border-white/30 text-white text-sm font-semibold backdrop-blur shadow-sm transition-colors duration-300 hover:bg-white/25">
+                  <Icon className="w-4 h-4 shrink-0" strokeWidth={2.25} /> {p.label}
+                </span>
+              )
+            })}
+          </div>
         </div>
       </div>
       <Ctas dark secondaryLabel="Explore Fields" secondaryHref="/for-your-field" />
@@ -146,11 +163,13 @@ function Trims() {
         subtitle={`Three trims of one machine. Every HeliosOS MacBook starts at ${formatPrice(BASE_PRICE_CENTS)}.`} />
       <div className="relative z-10 mt-10 px-5 w-full max-w-5xl">
         <div className="grid gap-4 md:grid-cols-3">
-          {PERFORMANCE_OPTIONS.map((opt) => (
-            <div key={opt.id} className="rounded-2xl border border-border bg-card p-6 text-left shadow-sm">
+          {PERFORMANCE_OPTIONS.map((opt) => {
+            const featured = opt.badge === 'Recommended'
+            return (
+            <div key={opt.id} className={`rounded-2xl p-6 text-left transition-transform duration-300 ${featured ? 'border-2 border-volta-500 bg-card ring-4 ring-volta-500/15 shadow-xl md:scale-[1.04] relative z-10' : 'border border-border bg-card shadow-sm'}`}>
               <div className="flex items-center justify-between">
                 <h3 className="text-2xl font-semibold">{opt.name}</h3>
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-[5px] bg-secondary text-secondary-foreground">{opt.badge}</span>
+                <span className={`text-xs font-semibold px-2.5 py-1 rounded-[5px] ${featured ? 'bg-volta-600 text-white' : 'bg-secondary text-secondary-foreground'}`}>{opt.badge}</span>
               </div>
               <p className="mt-2 text-base text-muted-foreground">{opt.blurb}</p>
               <ul className="mt-4 space-y-1.5">
@@ -164,7 +183,8 @@ function Trims() {
                 {opt.deltaCents === 0 ? 'Included' : `+${formatPrice(opt.deltaCents)}`}
               </p>
             </div>
-          ))}
+            )
+          })}
         </div>
       </div>
       <Ctas dark={false} secondaryLabel="Compare & Configure" secondaryHref="/devices#configurator" />
