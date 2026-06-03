@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
-import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { AiLaptop, LaptopPhoto, laptopSrcForColor } from '@/components/landing/ai-laptop'
 import { WaitlistForm } from '@/components/waitlist-form'
@@ -54,13 +53,9 @@ export default function DevicesPage() {
             ready on day one — you just open the lid.
           </p>
           <p className="text-sm text-white/60">From {formatPrice(BASE_PRICE_CENTS)}</p>
-          <div className="flex items-center justify-center gap-3 pt-2">
-            <Button asChild variant="volta" size="lg">
-              <Link href="#configurator">Configure <ArrowRight className="h-4 w-4" /></Link>
-            </Button>
-            <Button asChild size="lg" className="bg-white/12 text-white border border-white/40 hover:bg-white/20">
-              <Link href="#order">Order Now</Link>
-            </Button>
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <Link href="#configurator" className="tbtn tbtn-gold">Configure <ArrowRight className="h-4 w-4" /></Link>
+            <Link href="#order" className="tbtn tbtn-ghost">Order Now</Link>
           </div>
         </motion.div>
       </section>
@@ -232,9 +227,9 @@ export default function DevicesPage() {
               </motion.p>
             </AnimatePresence>
           </div>
-          <Button asChild variant="volta" size="lg" className="shrink-0">
-            <Link href="#order">Buy Now <ArrowRight className="h-4 w-4" /></Link>
-          </Button>
+          <Link href="#order" className="shrink-0 inline-flex items-center justify-center gap-2 h-12 px-6 rounded-md font-bold text-[#1a1205] bg-gradient-to-b from-[#ffb938] to-[#f59e0b] shadow-[0_10px_26px_-10px_rgba(245,158,11,0.7)] transition-all duration-300 hover:from-[#ffc251] hover:to-[#ffa916] active:scale-[0.97]">
+            Buy Now <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </div>
