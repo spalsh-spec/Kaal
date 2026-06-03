@@ -27,8 +27,8 @@ export function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Light text over the dark hero (homepage + /devices), at the top, not scrolled.
-  const light = (pathname === '/' || pathname === '/devices') && !scrolled && !open
+  // Light text over the dark hero pages, at the top, not scrolled.
+  const light = ['/', '/devices', '/how-it-works', '/about', '/consulting'].includes(pathname) && !scrolled && !open
 
   return (
     <header

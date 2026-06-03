@@ -115,19 +115,21 @@ export default function HowItWorksPage() {
     <div className="min-h-screen bg-background">
       <Nav />
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 text-center max-w-4xl mx-auto px-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
-          <Badge variant="volta">The Process</Badge>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-normal tracking-tight">
-            Simple by design.
-            <br />
-            <span className="font-display italic gradient-text">Powerful in practice.</span>
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            From order to first AI win in 8 days. Here&apos;s exactly what happens — no surprises.
-          </p>
-        </motion.div>
+      {/* Hero — dark premium band */}
+      <section className="helios-panel text-white">
+        <div className="bg-grid-pattern/0 pt-36 pb-24 text-center max-w-4xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
+            <Badge variant="volta">The Process</Badge>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-normal tracking-tight text-white">
+              Simple by design.
+              <br />
+              <span className="font-display italic gradient-text">Powerful in practice.</span>
+            </h1>
+            <p className="text-xl text-white/80 max-w-2xl mx-auto font-medium">
+              From order to first AI win in 8 days. Here&apos;s exactly what happens — no surprises.
+            </p>
+          </motion.div>
+        </div>
       </section>
 
       {/* Timeline strip */}

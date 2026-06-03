@@ -39,16 +39,18 @@ export default function AboutPage() {
     <div className="min-h-screen bg-background">
       <Nav />
 
-      {/* Hero */}
-      <section className="pt-32 pb-20 text-center max-w-4xl mx-auto px-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
-          <Badge variant="volta">Our Story</Badge>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-normal tracking-tight">
-            AI for humans.
-            <br />
-            <span className="font-display italic gradient-text">Not developers.</span>
-          </h1>
-        </motion.div>
+      {/* Hero — dark premium band */}
+      <section className="helios-panel text-white">
+        <div className="pt-36 pb-24 text-center max-w-4xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
+            <Badge variant="volta">Our Story</Badge>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-normal tracking-tight text-white">
+              AI for humans.
+              <br />
+              <span className="font-display italic gradient-text">Not developers.</span>
+            </h1>
+          </motion.div>
+        </div>
       </section>
 
       {/* Manifesto */}

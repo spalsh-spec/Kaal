@@ -74,28 +74,30 @@ export default function ConsultingPage() {
     <div className="min-h-screen bg-background">
       <Nav />
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 text-center max-w-4xl mx-auto px-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
-          <Badge variant="volta">AI Consulting</Badge>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-normal tracking-tight">
-            Your personal
-            <br />
-            <span className="font-display italic gradient-text">AI specialist.</span>
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Work 1:1 with a certified HeliosOS specialist. They know your profession,
-            your device, and exactly how to turn AI into results for your specific situation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-            <Button asChild variant="volta" size="xl">
-              <Link href="#packages">See packages <ArrowRight className="h-5 w-5" /></Link>
-            </Button>
-            <Button asChild variant="ghost" size="xl">
-              <Link href="#specialists">Meet your specialists →</Link>
-            </Button>
-          </div>
-        </motion.div>
+      {/* Hero — dark premium band */}
+      <section className="helios-panel text-white">
+        <div className="pt-36 pb-24 text-center max-w-4xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
+            <Badge variant="volta">AI Consulting</Badge>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-normal tracking-tight text-white">
+              Your personal
+              <br />
+              <span className="font-display italic gradient-text">AI specialist.</span>
+            </h1>
+            <p className="text-xl text-white/80 max-w-2xl mx-auto font-medium">
+              Work 1:1 with a certified HeliosOS specialist. They know your profession,
+              your device, and exactly how to turn AI into results for your specific situation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+              <Button asChild variant="volta" size="xl">
+                <Link href="#packages">See packages <ArrowRight className="h-5 w-5" /></Link>
+              </Button>
+              <Button asChild size="xl" className="bg-white/12 text-white border border-white/40 hover:bg-white/20">
+                <Link href="#specialists">Meet your specialists →</Link>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* Trust bar */}
