@@ -5,6 +5,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://helios.ai'),
+  icons: { icon: '/favicon.svg' },
   title: {
     default: 'Helios.Ai — HeliosOS, your AI operating layer',
     template: '%s | Helios.Ai',
