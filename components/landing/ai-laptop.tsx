@@ -1,7 +1,18 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { BRAND_STACK, BrandLogo, type Brand } from '@/components/landing/brand-logos'
+
+// Configurator colour → photoreal laptop image
+const LAPTOP_BY_COLOR: Record<string, string> = {
+  midnight: '/hero/macbook-black.png',
+  silver: '/hero/macbook.png',
+  'space-black': '/hero/macbook-black.png',
+  starlight: '/hero/macbook-starlight.png',
+}
+export function laptopSrcForColor(colorId: string) {
+  return LAPTOP_BY_COLOR[colorId] ?? '/hero/macbook.png'
+}
 
 // Apps shown on the laptop screen (the simple "it's all already here" launchpad)
 const SCREEN_APPS: Brand[] = BRAND_STACK.slice(0, 8)
@@ -112,19 +123,24 @@ function Launchpad() {
   )
 }
 
-// Device-only photoreal laptop (no launchpad/tiles) — for reuse on /devices.
-export function LaptopPhoto({ className = '' }: { className?: string }) {
+// Device-only photoreal laptop (no launchpad/tiles) — crossfades on colour change.
+export function LaptopPhoto({ className = '', src = '/hero/macbook.png' }: { className?: string; src?: string }) {
+  const mask = 'radial-gradient(ellipse 72% 82% at 50% 48%, #000 54%, transparent 90%)'
   return (
     <div className={`relative w-full ${className}`} style={{ aspectRatio: '16 / 9' }}>
-      <img
-        src="/hero/macbook.png"
-        alt="HeliosOS — the AI-native laptop"
-        className="absolute inset-0 w-full h-full object-contain"
-        style={{
-          maskImage: 'radial-gradient(ellipse 72% 82% at 50% 48%, #000 54%, transparent 90%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 72% 82% at 50% 48%, #000 54%, transparent 90%)',
-        } as React.CSSProperties}
-      />
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={src}
+          src={src}
+          alt="HeliosOS — the AI-native laptop"
+          className="absolute inset-0 w-full h-full object-contain"
+          style={{ maskImage: mask, WebkitMaskImage: mask } as React.CSSProperties}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.45, ease: [0.22, 0.61, 0.36, 1] }}
+        />
+      </AnimatePresence>
     </div>
   )
 }

@@ -7,7 +7,7 @@ import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { AiLaptop, LaptopPhoto } from '@/components/landing/ai-laptop'
+import { AiLaptop, LaptopPhoto, laptopSrcForColor } from '@/components/landing/ai-laptop'
 import { WaitlistForm } from '@/components/waitlist-form'
 import { BASE_PRICE_CENTS, PERFORMANCE_OPTIONS, COLOR_OPTIONS, SETUP_OPTIONS } from '@/lib/config'
 import { formatPrice, cn } from '@/lib/utils'
@@ -116,7 +116,7 @@ export default function DevicesPage() {
                 style={{ background: `radial-gradient(ellipse at center, ${color.glow} 0%, transparent 70%)` }}
               />
               <div className="relative z-10">
-                <LaptopPhoto />
+                <LaptopPhoto src={laptopSrcForColor(colorId)} />
               </div>
             </div>
             <div className="mt-5 flex items-center justify-center gap-3 text-sm text-muted-foreground">
