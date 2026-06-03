@@ -27,8 +27,8 @@ export function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Light text only over the dark homepage hero (top, not scrolled).
-  const light = pathname === '/' && !scrolled && !open
+  // Light text over the dark hero (homepage + /devices), at the top, not scrolled.
+  const light = (pathname === '/' || pathname === '/devices') && !scrolled && !open
 
   return (
     <header

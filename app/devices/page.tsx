@@ -7,7 +7,7 @@ import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { DeviceMockup } from '@/components/device-mockup'
+import { AiLaptop, LaptopPhoto } from '@/components/landing/ai-laptop'
 import { WaitlistForm } from '@/components/waitlist-form'
 import { BASE_PRICE_CENTS, PERFORMANCE_OPTIONS, COLOR_OPTIONS, SETUP_OPTIONS } from '@/lib/config'
 import { formatPrice, cn } from '@/lib/utils'
@@ -29,7 +29,7 @@ export default function DevicesPage() {
       <Nav />
 
       {/* ── HERO ── */}
-      <section className="relative min-h-[88vh] flex flex-col items-center justify-center text-center overflow-hidden px-6 pt-28 pb-16">
+      <section className="relative min-h-[88vh] flex flex-col items-center justify-center text-center overflow-hidden px-6 pt-28 pb-16 helios-panel text-white">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div
             className="w-[680px] h-[680px] max-w-[92vw] rounded-full blur-3xl opacity-60 transition-all duration-700"
@@ -37,8 +37,8 @@ export default function DevicesPage() {
           />
         </div>
 
-        <div className="relative z-10 w-full max-w-[540px] mx-auto">
-          <DeviceMockup />
+        <div className="relative z-10 w-full max-w-3xl mx-auto">
+          <AiLaptop />
         </div>
 
         <motion.div
@@ -49,16 +49,16 @@ export default function DevicesPage() {
           <h1 className="text-5xl md:text-7xl font-display font-normal tracking-tight">
             Outwork the <span className="italic gradient-text">world.</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto">
+          <p className="text-lg md:text-xl text-white/80 max-w-xl mx-auto font-medium">
             The AI-native laptop, pre-loaded for your field. Configured, authenticated,
             ready on day one — you just open the lid.
           </p>
-          <p className="text-sm text-muted-foreground/70">From {formatPrice(BASE_PRICE_CENTS)}</p>
+          <p className="text-sm text-white/60">From {formatPrice(BASE_PRICE_CENTS)}</p>
           <div className="flex items-center justify-center gap-3 pt-2">
             <Button asChild variant="volta" size="lg">
               <Link href="#configurator">Configure <ArrowRight className="h-4 w-4" /></Link>
             </Button>
-            <Button asChild variant="white-outline" size="lg">
+            <Button asChild size="lg" className="bg-white/12 text-white border border-white/40 hover:bg-white/20">
               <Link href="#order">Order Now</Link>
             </Button>
           </div>
@@ -110,13 +110,13 @@ export default function DevicesPage() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Visual */}
           <div className="lg:sticky lg:top-28">
-            <div className="relative rounded-3xl border border-border/40 bg-card/30 p-8 overflow-hidden">
+            <div className="relative rounded-3xl border border-white/10 helios-panel p-8 overflow-hidden">
               <div
                 className="absolute inset-0 blur-3xl opacity-50 transition-all duration-700"
                 style={{ background: `radial-gradient(ellipse at center, ${color.glow} 0%, transparent 70%)` }}
               />
               <div className="relative z-10">
-                <DeviceMockup />
+                <LaptopPhoto />
               </div>
             </div>
             <div className="mt-5 flex items-center justify-center gap-3 text-sm text-muted-foreground">

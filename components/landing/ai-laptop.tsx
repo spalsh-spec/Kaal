@@ -111,3 +111,20 @@ function Launchpad() {
     </div>
   )
 }
+
+// Device-only photoreal laptop (no launchpad/tiles) — for reuse on /devices.
+export function LaptopPhoto({ className = '' }: { className?: string }) {
+  return (
+    <div className={`relative w-full ${className}`} style={{ aspectRatio: '16 / 9' }}>
+      <img
+        src="/hero/macbook.png"
+        alt="HeliosOS — the AI-native laptop"
+        className="absolute inset-0 w-full h-full object-contain"
+        style={{
+          maskImage: 'radial-gradient(ellipse 72% 82% at 50% 48%, #000 54%, transparent 90%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 72% 82% at 50% 48%, #000 54%, transparent 90%)',
+        } as React.CSSProperties}
+      />
+    </div>
+  )
+}
