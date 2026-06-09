@@ -195,7 +195,7 @@ export default function DevicesPage() {
           Open the box. <span className="italic gradient-text">Outwork everyone.</span>
         </h2>
         <p className="mt-4 text-muted-foreground">
-          Reserve your {perf.name} in {color.name} — {formatPrice(total)}. Ships in 5 days, fully
+          Reserve your {perf.name} in {color.name} — {formatPrice(total)}. Ships in 2–4 weeks, fully
           configured. 30-day returns, no questions.
         </p>
         <div className="mt-6 max-w-md mx-auto">
@@ -204,7 +204,7 @@ export default function DevicesPage() {
         <div className="mt-5 flex items-center justify-center gap-5 text-[11px] text-muted-foreground/60">
           <span>🔒 Secure</span>
           <span>↩ 30-day returns</span>
-          <span>⚡ Ships in 5 days</span>
+          <span>⚡ Ships in 2–4 weeks</span>
         </div>
       </section>
 

@@ -35,7 +35,7 @@ export const leverageOs: Product = {
     ],
     primary_button: { text: 'Order Now', order: true },
     secondary_button: { text: 'Learn More', scrollTo: 'how' },
-    note: '✓ 30-day money-back returns · ✓ Ships in 5 days',
+    note: '✓ 30-day money-back returns · ✓ Ships in 2–4 weeks',
     scroll_indicator_to: 'profession',
   },
 
@@ -165,7 +165,7 @@ export const leverageOs: Product = {
     eyebrow: 'Order now',
     title: 'One purchase. A lifetime of leverage.',
     subtitle: 'From $5,000. Hardware included — no monthly fee for the device.',
-    note: '✓ 30-day money-back returns · ✓ Ships in 5 days · ✓ Day-1 onboarding call',
+    note: '✓ 30-day money-back returns · ✓ Ships in 2–4 weeks · ✓ Day-1 onboarding call',
     primary_button: { text: 'Order Now', order: true },
     secondary_button: { text: 'Talk to Sales', href: '/consulting' },
   },
