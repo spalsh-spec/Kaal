@@ -31,9 +31,9 @@ export const leverageOs: Product = {
     hero_title: 'The AI-native MacBook.',
     hero_subtitle: "Open the lid — you're already ahead. Pre-loaded for your profession. From $5,000.",
     hero_slides: [
-      { slide_type: 'image', image_path: '/hero/macbook.png',           alt_text: 'HeliosOS MacBook — starlight' },
+      { slide_type: 'component', component_id: 'ai-laptop', alt_text: 'HeliosOS MacBook with pre-installed AI apps' },
       { slide_type: 'image', image_path: '/hero/macbook-black.png',     alt_text: 'HeliosOS MacBook — space black' },
-      { slide_type: 'image', image_path: '/hero/macbook-angle.png',     alt_text: 'HeliosOS MacBook — angled view' },
+      { slide_type: 'image', image_path: '/hero/macbook-starlight.png', alt_text: 'HeliosOS MacBook — starlight' },
     ],
     primary_button: { text: 'Order Now', order: true },
     secondary_button: { text: 'Learn More', scrollTo: 'how' },
