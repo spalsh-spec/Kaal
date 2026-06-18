@@ -37,7 +37,7 @@ const PROFESSION_DETAILS: Record<string, {
     headline: 'Marketing at 10× speed.',
     subheadline: 'Everything from strategy to copy to visuals — in hours, not weeks.',
     pain: 'You\'re expected to produce more content, run more campaigns, and prove more ROI — with the same team size. The tools exist to do this. You just don\'t have time to learn them all.',
-    promise: 'HeliosOS comes pre-loaded with every AI tool a marketing professional needs, configured to work together. From brief to published in the time it used to take to write a brief.',
+    promise: 'Kaal comes pre-loaded with every AI tool a marketing professional needs, configured to work together. From brief to published in the time it used to take to write a brief.',
     workflows: [
       { name: 'Monthly content calendar', before: '3 days', after: '90 minutes' },
       { name: 'Campaign copy (5 variants)', before: '4 hours', after: '20 minutes' },
@@ -45,14 +45,14 @@ const PROFESSION_DETAILS: Record<string, {
       { name: 'Social media graphics (10 images)', before: '2 days', after: '30 minutes' },
       { name: 'Email sequence (5 emails)', before: '1 day', after: '45 minutes' },
     ],
-    quote: 'My team thinks I hired a full agency. I just have HeliosOS.',
+    quote: 'My team thinks I hired a full agency. I just have Kaal.',
     quoteName: 'Sarah Chen',
     quoteRole: 'Marketing Director, Fintech startup',
   },
   lawyer: {
     headline: 'Legal work that used to take days. Now hours.',
     subheadline: 'Research, drafting, review — all accelerated without sacrificing precision.',
-    pain: 'Billable hours are being squeezed. Clients expect faster turnaround and lower bills. You\'re competing with legal tech startups that hired AI engineers. You don\'t need to hire engineers — you need HeliosOS.',
+    pain: 'Billable hours are being squeezed. Clients expect faster turnaround and lower bills. You\'re competing with legal tech startups that hired AI engineers. You don\'t need to hire engineers — you need Kaal.',
     promise: 'Pre-configured with legal-grade AI tools. Document review, contract drafting, case research, citation checking — all set up and ready. No learning curve. Just open the device and work.',
     workflows: [
       { name: 'Contract review (30 pages)', before: '3 hours', after: '25 minutes' },
@@ -69,7 +69,7 @@ const PROFESSION_DETAILS: Record<string, {
     headline: 'Medicine. Not paperwork.',
     subheadline: 'Reclaim the hours you\'re losing to documentation.',
     pain: 'You became a doctor to help patients. Instead you spend 2–4 hours per day on clinical documentation. Burnout is at record highs. AI can solve this — but no one has made it accessible to a busy clinician.',
-    promise: 'HeliosOS for Medical Professionals is built specifically for clinicians. SOAP notes before you leave the room. Drug interaction checks in seconds. Literature reviews in minutes. Fully HIPAA-compatible workflows.',
+    promise: 'Kaal for Medical Professionals is built specifically for clinicians. SOAP notes before you leave the room. Drug interaction checks in seconds. Literature reviews in minutes. Fully HIPAA-compatible workflows.',
     workflows: [
       { name: 'SOAP note per patient', before: '12 minutes', after: '2 minutes' },
       { name: 'Discharge summary', before: '20 minutes', after: '4 minutes' },
@@ -85,7 +85,7 @@ const PROFESSION_DETAILS: Record<string, {
     headline: 'Study smarter. Graduate ahead.',
     subheadline: 'The AI advantage your classmates don\'t know about yet.',
     pain: 'University hasn\'t changed how it teaches you — but the working world has already changed what it expects of you. The students who graduate ahead are the ones who learned to leverage AI. That starts now.',
-    promise: 'HeliosOS for Students gives you research superpowers, writing acceleration, and study tools that adapt to how you actually learn. Straight As aren\'t about working harder — they\'re about working with the right tools.',
+    promise: 'Kaal for Students gives you research superpowers, writing acceleration, and study tools that adapt to how you actually learn. Straight As aren\'t about working harder — they\'re about working with the right tools.',
     workflows: [
       { name: '2000-word essay (researched)', before: '2 days', after: '4 hours' },
       { name: 'Literature review (20 papers)', before: '1 week', after: '3 hours' },
@@ -101,7 +101,7 @@ const PROFESSION_DETAILS: Record<string, {
     headline: 'Ideas to published. Daily.',
     subheadline: 'Script. Thumbnail. Upload. Repeat.',
     pain: 'The algorithm rewards consistency. But consistency requires an output level that burns creators out. The biggest channels have teams. You don\'t have a team — but you can have a system that works like one.',
-    promise: 'HeliosOS for Creators combines scripting AI, thumbnail generation, YouTube SEO, voiceover tools, and video editing AI into one configured system. 4× the output. The same you.',
+    promise: 'Kaal for Creators combines scripting AI, thumbnail generation, YouTube SEO, voiceover tools, and video editing AI into one configured system. 4× the output. The same you.',
     workflows: [
       { name: 'Full video from idea to upload', before: '2 days', after: '5 hours' },
       { name: 'Script (10-minute video)', before: '3 hours', after: '25 minutes' },
@@ -117,7 +117,7 @@ const PROFESSION_DETAILS: Record<string, {
     headline: 'Decisions faster. Delegation easier.',
     subheadline: 'Run the company. Let AI run the admin.',
     pain: 'You\'re in back-to-back meetings, drowning in email, and expected to have a clear strategic view — simultaneously. The most successful founders and executives use AI to reclaim 2–3 hours per day.',
-    promise: 'HeliosOS for Executives is configured for the way leaders actually work: email triage, meeting prep and summaries, board decks, market intelligence, and strategic research — all on one device, ready to go.',
+    promise: 'Kaal for Executives is configured for the way leaders actually work: email triage, meeting prep and summaries, board decks, market intelligence, and strategic research — all on one device, ready to go.',
     workflows: [
       { name: 'Email inbox to zero', before: '2 hours', after: '25 minutes' },
       { name: 'Board deck (15 slides)', before: '3 days', after: '6 hours' },
@@ -149,7 +149,7 @@ const PROFESSION_DETAILS: Record<string, {
     headline: 'Analysis in hours. Not days.',
     subheadline: 'AI-powered financial work. Without the technical setup.',
     pain: 'Clients want faster analysis. Regulators want more documentation. Markets move 24/7. The analysts outperforming you aren\'t working harder — they\'ve automated the grunt work.',
-    promise: 'HeliosOS for Finance pre-installs Excel AI, report generation agents, earnings summary tools, and market research automation. Monthly reports in an hour. Risk analysis without the grind.',
+    promise: 'Kaal for Finance pre-installs Excel AI, report generation agents, earnings summary tools, and market research automation. Monthly reports in an hour. Risk analysis without the grind.',
     workflows: [
       { name: 'Monthly financial report', before: '1 week', after: '4 hours' },
       { name: 'Earnings call summary', before: '2 hours', after: '15 minutes' },
@@ -157,7 +157,7 @@ const PROFESSION_DETAILS: Record<string, {
       { name: 'Client investment memo', before: '1 day', after: '3 hours' },
       { name: 'Excel model (30-tab)', before: '2 days', after: '6 hours' },
     ],
-    quote: 'My junior analysts thought I had a team working overnight. It was just HeliosOS.',
+    quote: 'My junior analysts thought I had a team working overnight. It was just Kaal.',
     quoteName: 'David Park',
     quoteRole: 'Portfolio Manager, Family Office',
   },
@@ -173,7 +173,7 @@ export default function ForYourFieldPage() {
       <Nav />
 
       {/* Hero */}
-      <section className="helios-panel text-white">
+      <section className="kaal-panel text-white">
         <div className="pt-36 pb-24 text-center max-w-4xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
             <Badge variant="volta">For Your Field</Badge>
@@ -252,7 +252,7 @@ export default function ForYourFieldPage() {
                   <div className="w-6 h-6 rounded-full bg-emerge-500/20 flex items-center justify-center">
                     <Zap className="h-3 w-3 text-emerge-400" />
                   </div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">HeliosOS Fix</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Kaal Fix</p>
                 </div>
                 <p className="text-sm text-foreground/80 leading-relaxed">{detail.promise}</p>
               </div>

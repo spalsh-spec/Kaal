@@ -110,7 +110,7 @@ function ScreenContent() {
         <div className="flex items-center gap-2">
           <div className="w-24 h-4 rounded-full bg-white/5" />
           <div className="px-3 py-0.5 rounded-full bg-volta-500/20 border border-volta-500/30">
-            <span className="text-[8px] text-volta-300 font-medium">HeliosOS ●</span>
+            <span className="text-[8px] text-volta-300 font-medium">Kaal ●</span>
           </div>
         </div>
         <div className="w-16 h-3 rounded bg-white/5" />

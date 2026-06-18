@@ -75,7 +75,7 @@ export default function ConsultingPage() {
       <Nav />
 
       {/* Hero — dark premium band */}
-      <section className="helios-panel text-white">
+      <section className="kaal-panel text-white">
         <div className="pt-36 pb-24 text-center max-w-4xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
             <Badge variant="volta">AI Consulting</Badge>
@@ -85,7 +85,7 @@ export default function ConsultingPage() {
               <span className="font-display italic gradient-text">AI specialist.</span>
             </h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto font-medium">
-              Work 1:1 with a certified HeliosOS specialist. They know your profession,
+              Work 1:1 with a certified Kaal specialist. They know your profession,
               your device, and exactly how to turn AI into results for your specific situation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
@@ -185,7 +185,7 @@ export default function ConsultingPage() {
         </div>
 
         <p className="text-center text-sm text-muted-foreground mt-6">
-          All consulting sessions include a recording. HeliosOS device not required (but sessions are 3× more valuable with one).
+          All consulting sessions include a recording. Kaal device not required (but sessions are 3× more valuable with one).
         </p>
       </section>
 

@@ -27,7 +27,7 @@ const CAT_THUMB: Record<string, { icon: LucideIcon; grad: string }> = {
 
 const VIDEOS = [
   {
-    title: 'Your First Day with HeliosOS',
+    title: 'Your First Day with Kaal',
     description: 'A complete orientation to your new device. What\'s installed, where everything lives, and how to get your first AI win in under 30 minutes.',
     duration: '18 min',
     level: 'Beginner',
@@ -151,7 +151,7 @@ export default function LearnPage() {
       <Nav />
 
       {/* Hero */}
-      <section className="helios-panel text-white">
+      <section className="kaal-panel text-white">
         <div className="pt-36 pb-24 text-center max-w-4xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
             <Badge variant="volta">Video Library</Badge>

@@ -3,8 +3,8 @@ import { Footer } from '@/components/footer'
 import { Badge } from '@/components/ui/badge'
 
 export const metadata = {
-  title: 'Changelog — HeliosOS',
-  description: 'What\'s new in the HeliosOS stack. Updated every month.',
+  title: 'Changelog — Kaal',
+  description: 'What\'s new in the Kaal stack. Updated every month.',
 }
 
 const CHANGELOG = [
@@ -75,7 +75,7 @@ export default function ChangelogPage() {
           What&apos;s new in your stack
         </h1>
         <p className="text-muted-foreground">
-          AI moves fast. So does HeliosOS. Here&apos;s every change, every month.
+          AI moves fast. So does Kaal. Here&apos;s every change, every month.
         </p>
       </section>
 

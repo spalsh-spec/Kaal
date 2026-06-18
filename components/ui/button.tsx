@@ -19,7 +19,7 @@ const buttonVariants = cva(
         ghost:
           'hover:bg-muted hover:text-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
-        // HeliosOS custom variants (saffron-clay)
+        // Kaal custom variants (saffron-clay)
         volta:
           'bg-volta-500 text-white hover:bg-volta-600 shadow-lg shadow-volta-500/25 hover:shadow-volta-500/40 transition-all duration-200 hover:-translate-y-0.5',
         'volta-outline':

@@ -1,5 +1,5 @@
 // The homepage is now the reusable ProductSite, driven by the Leverage OS
-// (HeliosOS) product config. The panel implementations live under
+// (Kaal) product config. The panel implementations live under
 // components/product_site/ and are parameterised by content — the visual system
 // is unchanged. Editing content/products/leverage_os.ts changes this page.
 

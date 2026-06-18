@@ -1,5 +1,5 @@
 // ──────────────────────────────
-// HeliosOS — Configurator pricing model
+// Kaal — Configurator pricing model
 // ──────────────────────────────
 // All prices are in CENTS (formatPrice divides by 100).
 //

@@ -1,18 +1,18 @@
 import type { Product } from '@/types/product'
 
 // ──────────────────────────────────────────────────────────────────────────
-// Leverage OS (HeliosOS) — the MASTER TEMPLATE.
-// This config encodes the EXACT content of the current Helios.Ai homepage.
+// Leverage OS (Kaal) — the MASTER TEMPLATE.
+// This config encodes the EXACT content of the current Kaal.Ai homepage.
 // Editing these strings/arrays changes the site; the visual system is fixed.
 //
 // Note: the slug is "leverage_os" per the product brief; the displayed product
-// name is "HeliosOS" (the live brand). Both are intentional.
+// name is "Kaal" (the live brand). Both are intentional.
 // ──────────────────────────────────────────────────────────────────────────
 
 export const leverageOs: Product = {
   identity: {
-    product_name: 'HeliosOS',
-    company_name: 'Helios.Ai',
+    product_name: 'Kaal',
+    company_name: 'Kaal.Ai',
     slug: 'leverage_os',
     short_tagline: 'The AI-native MacBook.',
     main_slogan: 'we believe everyone can be a rising star.',
@@ -27,13 +27,13 @@ export const leverageOs: Product = {
   },
 
   hero: {
-    eyebrow: 'HeliosOS',
+    eyebrow: 'Kaal',
     hero_title: 'The AI-native MacBook.',
     hero_subtitle: "Open the lid — you're already ahead. Pre-loaded for your profession. From $5,000.",
     hero_slides: [
-      { slide_type: 'component', component_id: 'ai-laptop', alt_text: 'HeliosOS MacBook with pre-installed AI apps' },
-      { slide_type: 'image', image_path: '/hero/macbook-black.png',     alt_text: 'HeliosOS MacBook — space black' },
-      { slide_type: 'image', image_path: '/hero/macbook-starlight.png', alt_text: 'HeliosOS MacBook — starlight' },
+      { slide_type: 'component', component_id: 'ai-laptop', alt_text: 'Kaal MacBook with pre-installed AI apps' },
+      { slide_type: 'image', image_path: '/hero/macbook-black.png',     alt_text: 'Kaal MacBook — space black' },
+      { slide_type: 'image', image_path: '/hero/macbook-starlight.png', alt_text: 'Kaal MacBook — starlight' },
     ],
     primary_button: { text: 'Order Now', order: true },
     secondary_button: { text: 'Learn More', scrollTo: 'how' },
@@ -98,7 +98,7 @@ export const leverageOs: Product = {
     enabled: true,
     eyebrow: 'Choose your power',
     title: 'Normal. Pro. Max.',
-    subtitle: 'Three trims of one machine. Every HeliosOS MacBook starts at $5,000.',
+    subtitle: 'Three trims of one machine. Every Kaal MacBook starts at $5,000.',
     featured_badge: 'Recommended',
     items: [
       {
@@ -179,9 +179,9 @@ export const leverageOs: Product = {
   },
 
   seo: {
-    meta_title: 'HeliosOS — The AI-native MacBook',
+    meta_title: 'Kaal — The AI-native MacBook',
     meta_description:
-      'HeliosOS is a MacBook pre-loaded with the exact AI tools for your profession — ready the moment you open the lid. From $5,000.',
+      'Kaal is a MacBook pre-loaded with the exact AI tools for your profession — ready the moment you open the lid. From $5,000.',
     open_graph_image: '/hero/macbook.png',
   },
 }

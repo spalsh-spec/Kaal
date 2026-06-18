@@ -7,7 +7,7 @@
 // per product. Configs are plain, JSON-serialisable objects (icons are string
 // KEYS, not React components) so they can be pasted/copied in the builder.
 //
-// Map to the existing Helios.Ai homepage panels:
+// Map to the existing Kaal.Ai homepage panels:
 //   hero          → Hero panel (HeroSlideshow)
 //   howItWorks    → "Set up in 3 simple steps" panel (HowItWorks)
 //   explainer     → "Built for your profession" panel (ProductExplainer)
@@ -51,7 +51,7 @@ export interface HeroSlide {
 }
 
 export interface HeroConfig {
-  eyebrow: string            // hero_title's kicker, e.g. "HeliosOS"
+  eyebrow: string            // hero_title's kicker, e.g. "Kaal"
   hero_title: string
   hero_subtitle: string
   hero_slides: HeroSlide[]   // 1 slide = current static hero

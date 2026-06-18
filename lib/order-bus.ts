@@ -1,13 +1,13 @@
 // ───────────────────────────────────────────────
-// Helios.Ai — tiny global event bus to open the
+// Kaal.Ai — tiny global event bus to open the
 // staged order flow from anywhere (nav, CTAs) with
 // no provider plumbing. Works across all pages:
 //   • On the homepage the OrderFlow modal is mounted
-//     and listens for 'helios:open-order'.
+//     and listens for 'kaal:open-order'.
 //   • On other pages we route home with ?order=1,
 //     which OrderFlow auto-detects on mount.
 // ───────────────────────────────────────────────
-export const OPEN_ORDER_EVENT = 'helios:open-order'
+export const OPEN_ORDER_EVENT = 'kaal:open-order'
 
 export function openOrder() {
   if (typeof window === 'undefined') return

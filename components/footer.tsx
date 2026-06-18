@@ -17,7 +17,7 @@ export function Footer() {
                     style={{ backgroundImage: 'linear-gradient(135deg,#f59e0b,#fb7185)' }}>
                 <Sun className="w-4 h-4" />
               </span>
-              Helios<span className="text-volta-600">.Ai</span>
+              Kaal<span className="text-volta-600">.Ai</span>
             </div>
             <p className="text-base text-muted-foreground max-w-xs text-balance">
               {BRAND.slogan} The AI-native MacBook, pre-loaded for your profession.
@@ -25,7 +25,7 @@ export function Footer() {
             <Link href={ORDER_HREF} className="btn-box-gold px-5 py-2 text-sm mt-1 inline-flex">Order Now</Link>
           </div>
 
-          <FooterCol title="HeliosOS" links={[
+          <FooterCol title="Kaal" links={[
             { label: 'Overview', href: '/#hero' },
             { label: 'Devices', href: '/devices' },
             { label: 'Trims', href: '/#trims' },
@@ -46,7 +46,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <span>© {new Date().getFullYear()} Helios.Ai. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Kaal.Ai. All rights reserved.</span>
           <span className="italic">Open the lid — you&apos;re already ahead.</span>
         </div>
       </div>

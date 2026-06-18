@@ -8,7 +8,7 @@ import type { Product } from '@/types/product'
 export const reviewResponseSystem: Product = {
   identity: {
     product_name: 'Review Response System',
-    company_name: 'Helios.Ai',
+    company_name: 'Kaal.Ai',
     slug: 'review_response_system',
     short_tagline: 'Every review, answered on brand.',
     main_slogan: 'Turn reviews into reputation.',

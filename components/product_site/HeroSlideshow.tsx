@@ -161,7 +161,7 @@ export function HeroSlideshow({ hero, order }: { hero: HeroConfig; order: OrderC
 
   // ── Single-slide fallback (original contained layout) ─────────────────
   return (
-    <section id="hero" className="panel snap-panel helios-panel">
+    <section id="hero" className="panel snap-panel kaal-panel">
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       <Heading dark eyebrow={hero.eyebrow} title={hero.hero_title} subtitle={hero.hero_subtitle} />
       <div className="relative z-10 w-full flex-1 flex items-center justify-center px-5 pb-2 pointer-events-none">

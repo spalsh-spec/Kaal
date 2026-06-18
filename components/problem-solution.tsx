@@ -31,7 +31,7 @@ export function ProblemSolution() {
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           97% of AI value is being captured by &lt;3% of people who know how to set it up.
-          That ends with HeliosOS.
+          That ends with Kaal.
         </p>
       </div>
 
@@ -48,7 +48,7 @@ export function ProblemSolution() {
             <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center">
               <span className="text-red-400 text-sm font-bold">✕</span>
             </div>
-            <h3 className="text-lg font-semibold text-red-300">Before HeliosOS</h3>
+            <h3 className="text-lg font-semibold text-red-300">Before Kaal</h3>
           </div>
           <ul className="space-y-3">
             {BEFORE.map((item, i) => (
@@ -84,7 +84,7 @@ export function ProblemSolution() {
               <div className="w-8 h-8 rounded-full bg-emerge-500/20 flex items-center justify-center">
                 <span className="text-emerge-400 text-sm font-bold">✓</span>
               </div>
-              <h3 className="text-lg font-semibold text-emerge-300">With HeliosOS</h3>
+              <h3 className="text-lg font-semibold text-emerge-300">With Kaal</h3>
             </div>
             <ul className="space-y-3">
               {AFTER.map((item, i) => (
@@ -117,7 +117,7 @@ export function ProblemSolution() {
           <span className="gradient-text">15 hours</span> saved per week.
         </p>
         <p className="text-muted-foreground">
-          Average time reclaimed by HeliosOS users in their first 30 days — across all professions.
+          Average time reclaimed by Kaal users in their first 30 days — across all professions.
         </p>
       </motion.div>
     </section>

@@ -11,7 +11,7 @@ import type { Product } from '@/types/product'
 export const aiPhoneStaff: Product = {
   identity: {
     product_name: 'AI Phone Staff',
-    company_name: 'Helios.Ai',
+    company_name: 'Kaal.Ai',
     slug: 'ai_phone_staff',
     short_tagline: 'Your phone, answered. Always.',
     main_slogan: 'Never miss a customer again.',

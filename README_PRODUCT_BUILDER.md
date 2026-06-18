@@ -1,7 +1,7 @@
 # Product Builder — reusable product website system
 
 This repo's marketing site is now a **reusable product-site builder**. One fixed
-visual skeleton renders any product from a content config. The current Helios.Ai
+visual skeleton renders any product from a content config. The current Kaal.Ai
 homepage is the **master template** (`leverage_os`) and still looks exactly the same.
 
 > **Core rule:** the visual system is fixed in code; the content lives in configs.
@@ -14,7 +14,7 @@ homepage is the **master template** (`leverage_os`) and still looks exactly the 
 ```
 types/product.ts                      ← the Product schema (content shape)
 content/products/
-  ├─ leverage_os.ts                    ← MASTER TEMPLATE (HeliosOS) = current homepage
+  ├─ leverage_os.ts                    ← MASTER TEMPLATE (Kaal) = current homepage
   ├─ ai_phone_staff.ts                 ← sample product
   ├─ review_response_system.ts         ← sample product
   └─ index.ts                          ← registry + getProductBySlug()
@@ -162,7 +162,7 @@ a plain "unavailable" message. The route still exists but renders nothing useful
   brief's suggested `src/...` paths map to root: `types/`, `content/products/`,
   `components/product_site/`, `app/products/[slug]/`, `app/builder/`, `scripts/`.
 - **Slug vs name**: the master product's slug is `leverage_os` (per the brief)
-  while its displayed name is `HeliosOS` (the live brand). Both are intentional.
+  while its displayed name is `Kaal` (the live brand). Both are intentional.
 - **Optional sections** (`supportModules`, `pyramid`, `videoShowcase`) are **off**
   for Leverage OS so the homepage is byte-identical; enable them per product.
 - **Bespoke pages** (`/devices`, `/for-your-field`, `/learn`, `/support`,

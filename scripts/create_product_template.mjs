@@ -71,7 +71,7 @@ async function main() {
   src = src
     .replace(/export const leverageOs: Product/, `export const ${camel}: Product`)
     .replace(/export default leverageOs/, `export default ${camel}`)
-    .replace(/product_name: 'HeliosOS'/, `product_name: ${JSON.stringify(name)}`)
+    .replace(/product_name: 'Kaal'/, `product_name: ${JSON.stringify(name)}`)
     .replace(/slug: 'leverage_os'/, `slug: ${JSON.stringify(slug)}`)
     .replace(/\/hero\/macbook\.png/g, `/placeholders/${slug}-hero.png`)
 

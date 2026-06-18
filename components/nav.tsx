@@ -7,7 +7,7 @@ import { Menu, X, Sun } from 'lucide-react'
 
 // Minimal Tesla-style nav. Order routes to the configurator.
 const LINKS = [
-  { label: 'HeliosOS', href: '/#hero' },
+  { label: 'Kaal', href: '/#hero' },
   { label: 'Devices', href: '/devices' },
   { label: 'Fields', href: '/for-your-field' },
   { label: 'Support', href: '/support' },
@@ -42,7 +42,7 @@ export function Nav() {
                 style={{ backgroundImage: 'linear-gradient(135deg,#f59e0b,#fb7185)' }}>
             <Sun className="w-4 h-4" />
           </span>
-          <span className={light ? 'text-white' : 'text-foreground'}>Helios<span className={light ? 'text-amber-300' : 'text-volta-600'}>.Ai</span></span>
+          <span className={light ? 'text-white' : 'text-foreground'}>Kaal<span className={light ? 'text-amber-300' : 'text-volta-600'}>.Ai</span></span>
         </Link>
 
         <div className="hidden md:flex items-center gap-7">

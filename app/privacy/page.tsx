@@ -3,8 +3,8 @@ import { Footer } from '@/components/footer'
 import { Badge } from '@/components/ui/badge'
 
 export const metadata = {
-  title: 'Privacy Policy — HeliosOS',
-  description: 'How HeliosOS handles your data. Short version: we don\'t sell it, we minimize it, and you own it.',
+  title: 'Privacy Policy — Kaal',
+  description: 'How Kaal handles your data. Short version: we don\'t sell it, we minimize it, and you own it.',
 }
 
 export default function PrivacyPage() {
@@ -29,7 +29,7 @@ export default function PrivacyPage() {
           {[
             {
               title: '1. Who we are',
-              body: 'HeliosOS, Inc. ("HeliosOS", "we", "us") is a company that sells AI-configured laptop computers. Our registered address is available on request. For privacy questions, contact us at privacy@leverageos.com.',
+              body: 'Kaal, Inc. ("Kaal", "we", "us") is a company that sells AI-configured laptop computers. Our registered address is available on request. For privacy questions, contact us at privacy@leverageos.com.',
             },
             {
               title: '2. Information we collect',
@@ -68,7 +68,7 @@ All service providers are under contractual obligation to handle your data secur
             },
             {
               title: '5. Your AI tools and data privacy',
-              body: 'Your HeliosOS device runs AI tools (Claude, Perplexity, etc.) under your own accounts. Your interactions with those tools are governed by their respective privacy policies. HeliosOS does not have access to your AI conversations or outputs.',
+              body: 'Your Kaal device runs AI tools (Claude, Perplexity, etc.) under your own accounts. Your interactions with those tools are governed by their respective privacy policies. Kaal does not have access to your AI conversations or outputs.',
             },
             {
               title: '6. Data retention',

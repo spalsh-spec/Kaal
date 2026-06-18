@@ -11,7 +11,7 @@ import type { FooterCtaConfig, OrderConfig } from '@/types/product'
 export function FooterCTA({ data, order }: { data: FooterCtaConfig; order: OrderConfig }) {
   const id = order.mode === 'configurator' ? 'order' : 'final-cta'
   return (
-    <section id={id} className="panel snap-panel helios-panel">
+    <section id={id} className="panel snap-panel kaal-panel">
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       <div className="m-auto flex flex-col items-center text-center px-5 z-10">
         <motion.div {...fade} className="max-w-2xl">

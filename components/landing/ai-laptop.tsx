@@ -50,7 +50,7 @@ export function AiLaptop() {
       >
         {/* Photoreal laptop (generated, hosted in /public/hero). 16:9. */}
         <div className="relative w-full" style={{ aspectRatio: '16 / 9' }}>
-          <img src="/hero/macbook.png" alt="HeliosOS — the AI-native laptop"
+          <img src="/hero/macbook.png" alt="Kaal — the AI-native laptop"
                className="absolute inset-0 w-full h-full object-contain pointer-events-none"
                style={{
                  maskImage: 'radial-gradient(ellipse 70% 80% at 50% 48%, #000 52%, transparent 88%)',
@@ -97,7 +97,7 @@ function Launchpad() {
   return (
     <div className="relative w-full h-full flex flex-col overflow-hidden">
       <div className="flex items-center justify-between" style={{ padding: '3cqw 4cqw 2cqw' }}>
-        <span className="font-semibold text-white/90" style={{ fontSize: '4cqw' }}>HeliosOS</span>
+        <span className="font-semibold text-white/90" style={{ fontSize: '4cqw' }}>Kaal</span>
         <span className="flex items-center text-white/55" style={{ fontSize: '3.4cqw', gap: '1.5cqw' }}>
           <span className="rounded-full bg-emerald-400" style={{ width: '2cqw', height: '2cqw' }} /> Ready
         </span>
@@ -132,7 +132,7 @@ export function LaptopPhoto({ className = '', src = '/hero/macbook.png' }: { cla
         <motion.img
           key={src}
           src={src}
-          alt="HeliosOS — the AI-native laptop"
+          alt="Kaal — the AI-native laptop"
           className="absolute inset-0 w-full h-full object-contain"
           style={{ maskImage: mask, WebkitMaskImage: mask } as React.CSSProperties}
           initial={{ opacity: 0 }}

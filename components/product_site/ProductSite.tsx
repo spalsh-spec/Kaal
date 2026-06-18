@@ -4,7 +4,7 @@
 // composition, driven entirely by a Product config. Sections render only when
 // present AND enabled, so a product can show as many or as few as it needs.
 //
-// Canonical order matches the current Helios.Ai homepage exactly:
+// Canonical order matches the current Kaal.Ai homepage exactly:
 //   Hero → HowItWorks → ProductExplainer → StackGrid → PlanCards → SocialProof
 //   → [SupportModules] → [PyramidImages] → [VideoShowcase]
 //   → [OrderFlow if inline] → FooterCTA

@@ -28,7 +28,7 @@ export default function DevicesPage() {
       <Nav />
 
       {/* ── HERO ── */}
-      <section className="relative min-h-[88vh] flex flex-col items-center justify-center text-center overflow-hidden px-6 pt-28 pb-16 helios-panel text-white">
+      <section className="relative min-h-[88vh] flex flex-col items-center justify-center text-center overflow-hidden px-6 pt-28 pb-16 kaal-panel text-white">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div
             className="w-[680px] h-[680px] max-w-[92vw] rounded-full blur-3xl opacity-60 transition-all duration-700"
@@ -86,7 +86,7 @@ export default function DevicesPage() {
           />
           <img
             src="/ai-ecosystem.svg"
-            alt="A HeliosOS laptop with a glowing AI core, surrounded by the connectors, skills, plugins and agents it ships pre-loaded with — Slack, GitHub, Notion, Figma, Gmail, Calendar, Linear, Asana, HubSpot, Airtable, Canva, Adobe, Vercel, Cloudflare, CockroachDB, Databricks, BigQuery and more."
+            alt="A Kaal laptop with a glowing AI core, surrounded by the connectors, skills, plugins and agents it ships pre-loaded with — Slack, GitHub, Notion, Figma, Gmail, Calendar, Linear, Asana, HubSpot, Airtable, Canva, Adobe, Vercel, Cloudflare, CockroachDB, Databricks, BigQuery and more."
             className="relative z-10 w-full h-auto rounded-2xl"
           />
         </motion.div>
@@ -105,7 +105,7 @@ export default function DevicesPage() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Visual */}
           <div className="lg:sticky lg:top-28">
-            <div className="relative rounded-3xl border border-white/10 helios-panel p-8 overflow-hidden">
+            <div className="relative rounded-3xl border border-white/10 kaal-panel p-8 overflow-hidden">
               <div
                 className="absolute inset-0 blur-3xl opacity-50 transition-all duration-700"
                 style={{ background: `radial-gradient(ellipse at center, ${color.glow} 0%, transparent 70%)` }}
